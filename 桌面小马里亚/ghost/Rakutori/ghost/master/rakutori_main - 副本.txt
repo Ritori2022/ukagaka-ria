@@ -1,0 +1,2324 @@
+#_Common
+{$if ({$mode}==0)}
+
+//**** 乱数Talk *************************************************************************************************
+
+$Talk
+{$talkmemo=0}{$RandomTalk}
+
+//---- 连锁Talk -------------------------------------------------------------------------------------------------
+
+//---- 乱数TALK ------------------------------------------------------------------------------------------------- 
+
+$RandomTalk;nonoverlap
+//---- 环境 ----------------------------------------------------------------------------------------------------- 
+\0\s[8]里亚还不太会说话……\e
+\0\s[1]里亚最近努力学习，\w9\n能说的话多一点了哟，\w9\w9\w9\n\s[5]发现了吗？\e
+\0\s[3]地球正在变热…\w9\w9\n是真的吗？\n\w9\w9\w9\s[20]那样的话一整年都可以穿短裙，\w9\w9\n\s[22]好期待哦。\e
+\0\s[28]里亚没有专属的使魔呢……\w9\w9\s[3]\n因爲牧师不能训练老鹰、\w9或者大嘴鸟哟。\e
+\0\s[28]里亚没有专属的使魔呢……\w9\w9\s[22]\n不过最近\w9想养毛茸茸胖嘟嘟的仓鼠仔。\e
+\0\s[22]传送阵还可以放在玩家蹄子底下的时候，\n\w9\w9真是很好用呢……\w5…\w5…\w5\e
+\0\s[3]Heal，是牧师的职责\n\w5里亚很骄傲的职责哟！\e
+\0\s[3]Heal，是牧师的职责\n\w5不过，一直很疑惑\n\w5难道是把里亚的血液传送给对方吗？\s[20]\e
+\0\s[28]帮小马加血就可以赚到很多钱吗？怎么会有那种事！\s[9]\n\w5那不就是卖血吗？！\s[9]\e
+\0\s[3]Heal，虽说是把血液传送对方\n\w5但消耗的却是SP呢？\s[3]\e
+\0\s[22]可以把讨厌的队友直接抽水抽走……\w9\n很棒呢。\w9\w9\n\n…\w9…\w9…\s[20]啊！不可以这么想…\w9…\e
+\0\s[22]抽水是什么？\s[3]\w9\w9\w9\w9\n嘿嘿……\s[5]\e
+\0\s[5]普隆德拉的阳光，\w5很舒服呢。\e
+\0\s[22]即使是晚上，也有很多小马的街道\w5很热闹。\e
+\0\s[3]说实话，\w5一直觉得……\n\w9\w9\s[8]普隆德拉大教堂的形状，\w5非常的奇怪……\e
+\0\s[6]首都街道上经常有很多小马，\w5非常热闹。\w9\w9\w9\w9\n不过……\w9\s[3]听说有很多不是\w5「真正的小马」？\e
+\0\s[22]仓鼠仔真的好可爱啊，\w9\n看到它们睡觉的样子\w5就觉得很幸福……\e
+\0\s[6]在{$username}的计算机里已经住了很久了，\w9\w9\n\s[22]渐渐的也习惯了。\w9\w9\n\s[5]以前没有住过这样的地方，\w5觉得很新鲜呢！\e
+\0\s[3]好想尝试一次啊……\w9宿舍生活。\w9\w9\n听说很有趣的。\e
+\0\s[6]普隆德拉的教会学校…\w9是有宿舍的。\w9\w9\n\s[4]不过里亚没有住。\e
+\0\s[28]咦…？\w9\n里亚以前的事吗？\w9\w9\w9\n\n\s[22]嘿嘿，\w5是秘密。\e
+\0\s[27]偶尔会想起学姐的事情……\w9\w9\n好怀念啊。\e
+\0\s[5]把被子晒在太阳底下一整天，\w9晚上收回来的时候，\w9就会有阳光的味道哟！\w9\w9\n\s[30]{$username}也喜欢晒太阳吗？\e
+\0\s[5]能遇到{$username}真好呢。\e
+\0\s[29]虽然里亚看起来\w5总是没什么事做……\w9\w9\n\s[7]不过其实也是很努力的哟！\w9\n真的！！\e
+\0\s[2]啊…\w5接受到了邮件。\s[6]\w9\w9\w9\n……什么？！\w5\s[20]无法打开？！\w9…\w5…\w5…\w5…\w5…\w5…\w5\s[5]嘿嘿，\w5是骗你的。\w9\n吓了一跳吗？\e
+\0\s[29]晚上喝太多水的话，\w9眼睛会肿起来……\e
+\0\s[24]里亚喜欢红茶，\w5可是不喜欢太甜的。\w9\w9\s[7]里亚已经是成年马了。\e
+\0\s[2]虽然看起来是这个样子，\w9\s[21]不过，\w5里亚已经是正式的神官了哟！！\w9\w9\w9\n\n[half]\s[29]……什么嘛，\w5那种不相信的眼神……\w9\w9\s[7]\n{$username}好过分……\e
+\0\s[6]神官考试……\w9一下子就过去了，\w5都没什么记忆了。\s[22]\w9\w9\n嗯，\w5里亚也是去过瓦尔哈拉的小马哟，\w9\s[4]虽然什么都不记得了。\e
+\0\s[6]去过瓦尔哈拉的小马，\w9都会失去过去的记忆，\w9\w9这是真的。\e
+\0\s[6]以前的事记不太清了……\w9不过偶尔\w5还是会想起一点点。\w9\w9\n\n[half]\s[27]比如喝红茶的时候……\w9就会想起\w5以前也曾跟谁一起喝茶……\e
+\0\s[20]仓鼠仔滚成一个球了！！\w9\n啊啊！\w5怎么办？！\e
+\0\s[27]最近\w5有点儸嗦了吗……\w9\w9\w9\s[4]（沮丧）\e
+\0\s[28]天空之城……\w9去过吗？\w9\w9\n\s[6]那里的楼梯\w5很长很长哦，\w9要走整整一天。\w9\w9\n\n[half]\s[22]所以里亚去的时候，\w9在背包里装满了食物，\w9还有睡袋。\e
+\0\s[6]朱诺之城的图书馆，\w9最下面的楼梯后面\w5有一个秘密的地方。\w9\w9\n\n[half]\s[5]很不容易被发现的哟，\w9\w9经常跟朋友们会在那里藏糖果。\w9\w9\w9\n\n[half]\s[3]不过，\w5糖果总是自己消失了，\w9\s[20]是被谁偷吃掉了吗？\e
+\0\s[3]其实里亚去过的城市并不多……\w9\w9\n听说黑格镇\w5很漂亮，\w5还有气球呢，\w9\s[22]真想去看看啊。\w9\w9\w9\n\n[half]\s[5]能跟{$username}一起去就好了。\e
+\0\s[3]里亚搭乘飞空艇\w5的时候，\w9遇到了偷渡的小马……\n\n[half]\w9\w9\w9\w9\s[28]他被船长发现了，\w9险些被丢下去，\w9\w9\n\n[half]\s[29]结果\w5不知道爲什么，\w9魔物们也出现了，\w5大家乱作一团，\w5偷渡的小马\w5一下子就不见了。\w9\w9\w9\n\n\s[30]真的从天空中跳下去了吗？\w9\w9\w9\w9\w9\n\n\n[half]\s[29]里亚猜他只是躲到厨房去了。\e
+\0\s[3]呆呆的看着\w5房间的角落\w5的时候，\n\w9\w9渐渐的会觉得\w5那里有什么别的东西\w5在动……\w9\w9\w9\n\s[28]{$username}看见过吗？\e
+\0\s[2]今天，\w9一开机的时候，\w9出现了好大一只黑猫！！！\w9\w9\w9\w9\s[7]\n\n[half]…\w9…是真的啦！！\e
+\0\s[6]偶尔也要看一下新闻。\w9\w9\n\n[half]嗯，\w5今天的头条是……\w5……\w9…\w5…\w5…\w9…\w9…\w9…Z\w5z\w5z\w5zzz(瞌睡)\e
+\0\s[27]以前，\w5很希望得到「爱心发夹」，\w9\s[6]于是跟朋友一起\w5在钟楼的地下\w5挖了很久的珊瑚。\w9\w9\w9\n\n[half]虽然那里很冷，\w9\s[5]但是一回想起来，\w9里亚縂会觉得很开心。\e
+\0\s[3]听说有骑士小姐\w5会偷偷地把裙子剪短……\w9\w9\w9\n\s[20]已经很短了不是吗？！\e
+\0\s[6]十字军的盔甲\w5真的很重。\w9\w9\n\n[half]有一次经过装备店的时候\w5不小心踫到一件护甲，\w9\w9\s[20]以爲一定会发出巨大的响动，\w9\w9所以里亚都已经\w5把耳朵捂起来了，\w9\w9\w9\w9\n\n[half]\s[29]但其实，\w5那件护甲根本动也没动。\e
+\0\s[5]裙子短一点的话，\w9会比较凉快。\w9\w9\n\n[half]里亚虽然不怕热，\w9但是觉得把膝盖\w5露出来\w5会比较舒服。\e
+\0\s[6]里亚以前，\w5把西瓜的种子\w5种到了教堂后面。\w9\w9\n\s[29]不过到现在\w5也没有发芽的迹象……\e
+\0\s[20]冰箱里的土豆发芽了！！\w9\w9\w9\n{$username}的冰箱连接到了异空间吗？！\e
+\0\s[3]教堂旁边，\w5有个影子一闪就消失了。\w9\w9\n\s[28]是猫吗……\w9\s[29]但又好像大了点。\w9\w9\n\n[half]\s[6]算了不要想这个了。\e
+\0\s[7]糖果……\w9\w9\n藏到哪里去了呢……\w9\w9\n\s[4]唔…………\e
+\0\s[6]密码是，\w5第四座书架，\w5从上面数第五层，\w5从左面数第2格。\e
+\0\s[28]好像有小马\w5在书架里藏了什么……\e
+\0\s[28]诗集被撕掉了一页。\w9\w9\n\n[half]\s[30]嗯……\w9来看看……\w9写的什么呢……\w9\w9\n\n[half]啊，\w5这个文字，\w9…\w9…\w9\s[4]里亚看不懂(沮丧)\e
+\0\s[28]{$username}知道卢恩吗？\w9\w9\w9\n\n[half]\s[5]首都附近的草原，\w5很美丽。\w9\w9\n春天在草地上打滚\w5的时候，\w9\w9\s[22]发现了粉红色的波利。\w9\w9\w9\w9\n\n\s[6]那时候它们还不是魔物…\w9\w9\w9\w9\n\n[half]\s[29]现在也不是吧，\w9\w9如果不是小马\w5硬要拿走它身上的结晶…\e
+\0\s[0]入学的时候就被教导，\w9\w9现在是战争时期哦！\w9\w9\w9\w9\n\s[30]可是，\w9是怎样的战争呢？\w9\w9\w9\w9\n\n[half]一走出教室，\w9看到蓝色的天空，\w9还有轻柔的风，\s[5]\w9\w9就把什么都忘记了。\e
+\0\s[22]吃布丁的时候，\w9有想起什么吗？\w9\w9\n\s[5]里亚总会想起波利哦！\w9\w9\w9\n\n[half]所以，\w9有一次实在忍不住，\w9\s[22]在布丁上\w5画了脸……\e
+\0\s[6]…\w5…\w5于是，\w9小马给自己的掠夺\w9挂上了崇高的理由。\e
+\0\s[0]里亚生日\w5的时候，\w9\w9朋友送了里亚一块蛋糕。\w9\w9\w9\w9\n\n[half]看起来很普通的蛋糕，\w9\w9\s[28]但是一直吃到最后，\w9发现在里面藏了一整颗\w9草莓。\w9\w9\w9\w9\n\n[half]\s[6]里亚一直想着那个朋友的事，\w9\w9\w9她当时大概，\w9\s[29]只是不知道\w5该怎么做蛋糕吧？\e
+\0\s[29]其实\w5只是假装的啦\w5…\w5…\w9\w9\w9\n里亚们都知道的。\e
+\0\s[28]捉迷藏，\w9{$username}喜欢吗？\w9\w9\w9\n\n[half]\s[6]教堂里面\w5是禁止这个游戏的，\w9\w9说是不可以大声喧闹。\w9\w9\w9\w9\n\s[3]不过\w5实际上，\w9\w9\w9\n\n[half]\w9\w9是因爲有小马消失了吧。\e
+\0\s[6]那些\w5消失了的，\w9\w9再也不回来了的小马们，\w9\w9\w9\n大家都说，\w9是因爲他们自己放弃了这个世界。\e
+\0\s[6]里亚\w5生活的这个世界，\w9\w9\w9也许并不是完全的美好，\w9\w9\w9\w9\n\n[half]\s[5]但是里亚喜欢这里。\e
+\0\s[6]里亚\w5并不是因爲喜欢教堂\w5才成爲牧师的。\w9\w9\w9\w9\n\n[half]\s[3]唔…\w5…\w5理由吗？\w9\w9\w9\n\s[8]暂时保密吧，\w9\w9以后有机会，\w9再说给{$username}听。\e
+\0\s[0]热闹的地方\w5也很喜欢，\w9\w9安静的气氛\w5也不错。\w9\w9\w9\n\n[half]\s[22]里亚不会想那么多，\w9\w9随遇而安也不错啊？\e
+
+//---- 物品 ----------------------------------------------------------------------------------------------------- 
+\0\s[29]开箱子这种行爲，\w5\n和赌博没什么两样。\e
+\0\s[30]紫箱开出的物品\w5真的会比较好吗？\e
+\0\s[29]爲什么有些BOSS\w5会把自己重要的物品\w5放入箱子里呢？\e
+\0\s[29]精炼的时候，\w9\n不管如何进出精炼房\w5都是没有意义的。\e
+\0\s[29]精炼的时候，\w9\n不管如何上下线\w5都是没有意义的。\e
+\0\s[29]精炼的时候，\w9\n不管如何切换装备\w5都是没有意义的。\e
+\0\s[29]精炼的时候，\w9\n不管如何唱赞美诗\w5都是没有意义的。\e
+\0\s[29]精炼的时候，\w9\n不管如何换所在的位置\w5都是没有意义的。\e
+\0\s[29]精炼的时候，\w9\n\s[9]用技能欺、\w9欺负NPC是被禁止的……！\e
+\0\s[3]听说魔物\w5都会携带7样物品。\w9\w9\n\s[6]如果没有第7样的话，\w9\n就用苹果补齐。\w9\w9\w9\n\n\s[3]……不觉得有点奇怪？\w9\w9\n\n爲什麽一定是苹果呢？\e
+\0\s[0]第一次听说\w5「带洞」\w5的装备的时候，\w9\s[2]\n真的吓了一跳！\w9\w9\n还以爲那与带洞的袜子没有分别呢！\w9\n价格竟然会那麽昂贵……\w9\w9\w9\n\n\s[29]后来才发现\w5「洞」\w5其实不是真正的洞。(叹)\e
+\0\s[6]在\w5「洞」\w5里面插入卡片，\w9\n其实就相当于在计算机主板上插入组件。\w9\w9\n不同的组件当然有不同的效果了。\w9\w9\w9\n{$username}的计算机主板上…\w9\w9\n\s[20]哇啊！！！！！这是什麽搭配……\w9\w9\n\n\s[8]呃…\w5很有…\w5个性……||||\e
+\0\s[0]有很多研究卡片的小马，\w9\n废寝忘食。\w9\w9\n\s[6]但是卡片本身的获得是十分困难的。\w9\w9\n\s[3]虽然是这麽听说……\w5还是有很多卡片出现在市场上。\w9\w9\w9\n\n\s[5]里亚里亚，\w5也买了一本卡片画册哦！\w9\w9\n\s[22]虽然不能使用，\w5但是光是看看也挺开心的。\e
+\0\s[3]听说，\w5研究了会攻击小马的魔物，\w9\n发现了一个共同点。\w9\w9\w9\n\n\s[6]他们的体内都含有某种结晶。\w9\w9\n\n不过，\w5那些并没有主动攻击小马的魔物，\w9\n也还是被敲碎了拿来研究。\w9\w9\w9\n\n\s[29]小马其实也是魔物的一种吧。\w9\w9\n被结晶操纵，\w5而无法控制的去取得更多的结晶……\e
+\0\s[3]里亚说了奇怪的话吗？\w9\n……\w9\w9\n…………\w9\w9\w9\n………………\w9\w9\w9\w9\n\s[28]刚才好像在发呆……\w9\w9\w9\w9\n\n\s[8]{$username}不会介意吧？\e
+\0\s[28]把卡片带在身上这一回事，\w9本来就很奇怪了。\w9\w9\n\s[3]爲什麽魔王们，\w5都要把珍惜物品随身携带呢？\w9\w9\n\n也许是…\w5\s[2]因爲魔物无法使用仓库？！\w9\w9\w9\w9\n\n……\w9\n…………\w9\w9\n\s[8]里亚在开玩笑啦…\w9不要认真的想这件事了||||\e
+\0\s[0]从魔物身上得到的物品\w5的质量会比较好。\w9\w9\n不过，\w5铁匠做出来的物品，\w5才会有签名。\w9\w9\n\n\s[28]两边要怎麽取舍呢？\w9\s[30]\n{$username}会怎样做呢？\e
+\0\s[29]最近更新了很多强有力的装备，\w9\n很多铁匠都在抱怨，\w9店里冷清了不少。\e
+\0\s[0]里亚所认识的一位铁匠先生，\w9\n虽然蹄艺很一般，\w5但是，\w9\n打造前总会跳奇怪的舞来祁福。\w9\w9\w9\n\n\s[8]大家都知道那是没有用的，\w9\n但是都会为他加油。\w9\w9\w9\n\n\s[21]全神贯注的样子很帅气呢！！\w9\w9\n\n\s[5]最近听说他的蹄艺也进步了，\w9好开心！\e
+\0\s[28]说是不会损坏的装备，\w9\n真的\w5100%\w5不会损坏吗？\w9\w9\n\n\s[3]里亚的世界里，\w5损坏的几率，\w9的确不太高。\w9\w9\w9\n\n\s[29]但大家都说，\w5世界上的100%从来不是100，\w9\w9\n\n但0%，\w9就真的只有0。\e
+
+
+
+
+
+//---- 技能----------------------------------------------------------------------------------------------------- 
+\0\s[7]Heal(治愈术) !!\w9\w9\w9\w9\n\s[22]数字3204。\e
+\0\s[7]Heal(治愈术) !!\w9\w9\w9\w9\n\s[22]不按sfift就无效？！{$username}是不死系吗？\s[2]\e
+\0\s[7]Ruwach(光猎) !!\w9\w9\w9\w9\n\s[21]亮了吗？\e
+\0\s[7]Holy Light(神圣之光) !!\w9\w9\w9\w9\n\s[8]有伤害吗？\e
+\0\s[7]Impositio Manus(神威祈福) !!\w9\w9\w9\w9\n\s[22]{$username}，\w5加油！\e
+\0\s[7]Recovery(痊愈术) !!\w9\w9\w9\w9\n\s[3]好点吗？\e
+\0\s[7]Magnificat(圣母之颂歌) !!\w9\w9\w9\w9\n\s[22]双倍回复，\n\w5轻松很多吧？\e
+\0\s[7]Pneuma(光之障壁) !!\w9\w9\w9\w9\n\s[5]很漂亮的光吧？\e
+\0\s[7]\_v[voice\01.mp3]Teleportation(瞬间移动) !!\w9\s[26]\w9\w9\w9\w9\w9\n\s[5]嘿嘿…吓一跳吗？\e
+\0\s[7]Increase AGI(加速术) !!\w9\w9\w9\w9\n\s[5]{$username}，\w5加油！\e
+\0\s[7]Decrease agility(缓速术) !!\w9\w9\w9\w9\n\s[29]做事不可急躁、\w9心急吃不了热豆腐。\e
+\0\s[7]Signum Crucis(天使之光) !!\w9\w9\w9\w9\n\s[22]随便说说，\w9其实里亚并没有习得这个技能……\e
+\0\s[7]Angelus(天使之障壁) !!\w9\w9\w9\w9\n\s[3]据说可防御黑客入侵哟。\e
+\0\s[7]Blessing(天使之赐福) !!\w9\w9\w9\w9\n\s[5]{$username}，\w5加油！\e
+\0\s[7]Cure(治疗术) !!\w9\w9\w9\w9\n\s[5]{$username}，\w5加油！\e
+\0\s[7]Safety wall(暗之障壁) !!\w9\w9\w9\w9\n\s[1]…\w9…\w9…\w9\e
+\0\s[7]Resurrection(复活术) !!\w9\w9\w9\w9\n\s[21]{$username}，\w5不死！\e
+\0\s[7]Suffragium(牺牲祈福) !!\w9\w9\w9\w9\n\s[21]效率…\w9有提高吗？\e
+\0\s[7]Aspersio(洒水祈福) !!\w9\w9\w9\w9\n\s[8]啊、\w5计算机不是不死系……\e
+\0\s[7]Benedictio Sanctissimi Sacramenti(圣之祈福) !!\w9\w9\w9\w9\n\s[4]呼哇，\w9好长。\e
+\0\s[7]Sanctuary(光耀之堂) !!\w9\w9\w9\w9\n\s[5]{$username}和{$username}的朋友们都要加油！\e
+\0\s[7]Slow Poison(缓毒术) !!\w9\w9\w9\w9\n\s[6]这个技能…\w5真的有用吗？\e
+\0\s[7]Kyrie Eleison(霸邪之阵) !!\w9\w9\w9\w9\n\s[22]铛铛铛的声音、\w9真的很好听哟。\e
+\0\s[7]Gloria(幸运之颂歌) !!\w9\w9\w9\w9\n\s[21]LUCKY！\w5LUCKY！\e
+\0\s[7]Lex Divina(沉默术) !!\w9\w9\w9\w9\n\s[6]说话前，\w5要仔细思考。\e
+\0\s[7]Turn Undead(转生术) !!\w9\w9\w9\w9\n\s[21]转生术真的很辉呢。\e
+\0\s[7]Lex Aeterna(天使之怒) !!\w9\w9\w9\w9\n\s[5]事半功倍！\e
+\0\s[7]Magnus Exorcismus(十字驱魔攻击) !!\w9\w9\w9\w9\n\s[4]里亚没有学这个技能。\w9\w9\n学了这个的、\w5大多是马体砲台…\e
+\0\s[7]Assumptio(圣母之祈福) !!\w9\w9\w9\w9\n\s[3]其实…\w5被一层透明液体包裹，\w9\n感觉真的很奇怪耶。\e
+\0\s[7]Basilica(神圣殿堂) !!\w9\w9\w9\w9\n\s[22]已经安全了，\w5请安心的去吧……\e
+\0\s[7]Redemptio(救赎) !!\w9\w9\w9\w9\n\s[2]咦？\w9\w9啊啊！\w9\s[26]\w9\w9\w9\w9\w9\s[4]\n\n呼…\w5还是不要乱来了。\e
+\0\s[2]来电了！！\w9\n\n\s[7]光猎！！！\w9\w9\w9\n\n…\w5\s[8]稍微cosplay一下;;\e
+\0\s[6]神圣之光对圣女是没有效果的。\w9\w9\n\s[22]因爲她们内置了对\w5神圣属性闪光\w5的回避系统。\e
+\0\s[4]头晕眼花的时候\w5就使用治疗术。\w9\w9\n\s[28]昏昏欲睡的时候\w5就使用治疗术。\w9\w9\w9\n\n\s[29]……治疗术其实，\w5是清凉油。\e
+\0\s[7]解除冷冻状态！！！！！\w9\w9\w9\n\n痊!\w5愈!\w5术!!\w9\w9\w9\n\n\s[20]{$username}，\w5刚才好危险啊！\w9差点就被冷冻了哟！\w9\w9\w9\n看冷笑话的时候也要小心点嘛！\e
+\0\s[0]圣母之颂歌，\w5也叫做妈妈歌。\w9\w9\n\n对这任何小马都喊着\w5「妈妈」，\w5「妈妈」的，\w9\w9\n似乎逐渐成了一种kuso的风气。\w9\w9\w9\n\n\s[29]唔，\w5里亚是不介意被叫\w5「妈妈」\w5啦，\w5不过，\w9\n觉得对淑女来说还是不太礼貌。\w9\w9\w9\w9\w9\n\n\s[4](没有小马来吐糟一下吗?)\e
+\0\s[5]暗箭难防的时候，\w9就是用光之障蔽的时候了！\w9\w9\n\n\s[29]不过因爲时间很短，\w5位置的限定的也很严格，\w9\n所以使用的难度也增加了。\w9\w9\n\n\s[0]所以说，\w5光靠技能来防止暗箭中伤也是不行的，\w9\n\s[5]平时的言行也要谨慎哦！\n\n\w9\w9\w9(Teacher Mode)\e
+\0\s[28]所谓的加速术，\w5就是蹄底抹油的状态了。\w9\w9\n\n\s[5]一下子就跑得很快真的很感动！\w9\w9\n\s[22]这个时候就会觉得…\w9平时不锻炼也没关系啦……\w9\w9\n\n\s[7](好痛!!)\e
+\0\s[29]跟队友在一起的时候，\w9\n因爲使用了加速术，\w9队友们一下子就跑得不见踪影了！\w9\w9\w9\n\n伤脑筋……\e
+\0\s[9]「如果下次再跑得无影无踪的话，\w9\n就给你们全部加上缓速术！！」\w9\w9\n\n\s[29]队友因爲加速了而一下子跑丢的时候，\w9\n很生气地说了那些话，\w9\w9但其实，\w9\n\s[4]里亚根本没有修这个技能…\w9…\w9\w9(小声)\e
+\0\s[7]天使之障蔽，\w9\n可不是防火墻。\w9\n(嘟嘴)\w9\w9\n\n\s[29]就算是增加了体力，\w9也只是能多争取一点防守的时间而已。\w9\w9\n对于本身就有漏洞的防御，\w5还是于事无补。\w9\w9\w9\n\n\s[9]……所以说，\w5要时刻更新系统漏洞！！\e
+\0\s[0]天使之赐福的技能，\w5对于神职者来说，\w9\n是一个非常重要的技能。\w9\w9\n\n因爲这个技能，\w5能够轻松的操纵小马的属性数值。\w9\w9\n\s[22]与兴奋剂有点像？\w9\w9\w9\n\n\s[6]里亚觉得很可怕。\w9\w9\n\s[29]体验过一次的小马，\w5从此就无法离开神职者了。\e
+\0\s[2]{$username}要去厕所吗？\w9\n请等一下！！\w9\w9\w9\n\n\s[7]技能…\w5暗之障壁！！！\w9\w9\w9\w9\n\n\s[20]啊，\w5错了……\w5这不是厕所，\w5是红色小暗房……\e
+\0\s[2]{$username}要去厕所吗？\w9\n请等一下！！\w9\w9\w9\n\n\s[7]这一次…\w5真的是…\w9\n技能…\w5神圣殿堂！！！！\w9\w9\w9\w9\n\n\s[8]好了！(擦汗)\w9\n\s[5]建造好了哟！\w9{$username}请快去吧！\w9\w9谁也不会来打扰的哟！\e
+\0\s[3]心脏停止4分钟内\w5使用复活术的话，\w9就可以完全的挽回受伤者的生命……\w9\w9\w9\n\n\s[29]这是哪个游戏的设定啊？\w9现实里是不可能的。\w9\w9\n……\w9\n…………\w9\w9\n………………\w9\w9\w9\n\n\s[6]但是偶尔，\w5也有奇迹出现。\e
+\0\s[3]牺牲祁福的意义，\w9\n其实里亚并不是很明白。\w9\w9\n\n因爲里亚并没有觉得\w5「牺牲」\w5了什麽。\w9\w9\n\n\s[6]圣骑士的牺牲，\w5才是真正的牺牲。\w9\w9\w9\n\n\s[27]同样依靠神的力量，\w5却走上了不同的道路，\w9\n大概就是因爲这个吧……\e
+\0\s[6]通过祈祷，\w5将神的力量附着在水上，\w9\n这个，\w5就是圣水了。\w9\w9\n\s[0]这也是圣职者不能直接使用神的力量的证据。\w9\w9\n需要通过某些媒介才可以发挥出力量……\w9\w9\w9\n\n\s[29]所以，\w5每次都将大量的水装载包裹里，\w9\n这个时候就会想…\w9\n移动式饮水机什麽时候才能出现啊……\e
+\0\s[0]三位一体，\w5是课本中很重要的一个章节。\w9\w9\n对里亚们来说，\w5最具体的体现，\w9就是\w5「圣之祁福」\w5这个技能。\w9\w9\w9\n\n\s[2]啊……………………！！\w9\w9可是，\w5这个感觉，\w9\n实际体验过之后就觉得…\w5\s[20]太微妙了啊！！\w9\w9\w9\w9\n\n\s[4]呜呜…\w5只是站在学长身边一下下而已……\w9\nSP就空掉了…………\w5呜呜呜……\e
+\0\s[21]说起来，\w5有尝试过用光耀之堂这个技能去浇花吗？\w9\w9\n\s[22]嘿嘿嘿嘿嘿……\w9\w9\n如果有机会的话，\w5{$username}也请试试看。\w9\w9\n\s[0]去灌溉蘑菇的话，\w5可能更有趣哟！\w9\w9\w9\n\n\s[22]嘿嘿嘿嘿嘿嘿…………\e
+\0\s[0]在里亚的世界中，\w9大部分毒药都是缓慢的发作的。\w9\w9\n而解毒的绿色药水\w5也很容易就能取得。\w9\w9\n\s[3]所以，\w5在里亚们之中有一个技能象是穿了隐性衣一样，\w9\n从没有小马去注意它。\w9\w9\w9\n\n设计失误？\w9还是…\w5\s[2]连设计者自己都把它忘记了？\w9\w9\w9\w9\w9\n\n\s[4]缓毒术…\w9希望以后能有用上的机会……\e
+\0\s[6]因爲某个技能太强大了，\w9而被限制了使用。\w9\w9\n霸邪之阵就是一个例子。\w9\w9\w9\n\n\s[4]从一次咏唱全体有效，\w9变成了一次咏唱只对单体有效。\w9\w9\n这个决定并不是教会发出的。\w9\w9\w9\n\n\s[3]爲何要限制小马自身的能力呢？\w9\w9\w9\w9\n\n\s[29]难道是因爲最近的PK场里……\e
+\0\s[0]幸运之颂歌因爲没有咏唱延迟，\w9\n所以大家都只修很短的一段时间。\w9\w9\w9\n\n\s[28]虽然也没什麽不方便，\w9但是，\w5\n唱太多遍了，\w5\s[4]喉咙很干……\w9\w9\w9\n\n(这个时候就要来一罐清凉的黄水!!)\e
+\0\s[6]即使被沉默了，\w5也仍旧可以说话。\w9\w9\n只是不可以再继续咏唱魔法。\w9\w9\w9\n\n\s[0]所以说，\w5被沉默的是与魔法力量连线的声音。\e
+\0\s[0]针对无法死去的\w5「不死系」\w5而开发的攻击魔法——\w9\n\n「转生术」。\w9\w9\w9\w9\n\n\s[6]对于那些亡灵来说，\w9那道光也许是一种安慰。\e
+\0\s[6]拿着剑与天平的天使\w5所代表的是法律的公正。\w9\w9\n在塔儸的系统中代表的也是「正义」。\w9\w9\w9\n\n\s[3]但是在咏唱攻击力加倍的魔法的时候，\w5她爲什麽也会出现呢？\w9\w9\w9\n\n\s[20]还有，\w5正义之剑落下的声音，\w5听起来很像剪刀……\w9\w9\w9\n\s[2]难道会这麽想的只有里亚吗？！\e
+\0\s[6]很久以前在教会的地下室，\w5曾看到一幅画，\w9\n是被十字驱魔阵撕裂的死灵的图画。\w9\w9\w9\n\n\s[30]那幅画爲什麽会被单独放置在地下室呢？\w9\w9\w9\n\n\s[27]即使是圣职者，\w5看到那幅画，\w5心中都会浮起痛苦的心情…\w9\w9\w9\n\s[6]也许教会隐藏了更多的事情，\w9里亚们却什麽都不知道……\e
+
+
+
+
+
+//---- 衣物---------------------------------------------------------------------------------------------------------
+\0\s[3]{$username}会不会对里亚的服装感兴趣呢？\e
+\0\s[5]很可爱的衣服吧？\e
+\0\s[6]这是High Priest的制服修改而成的，很适合夏天穿着。\e
+\0\s[3]头上的蝴蝶结、\w9听说很贵呢……\e
+\0\s[7]里亚的鞋子不是芭蕾舞鞋哟！\w9\w9\n\s[3]……\w9虽然、\w9也挺想穿的……\e
+\0\s[7]里亚的发型是特意梳的哟。\e
+\0\s[5]里亚的头发，\w5很特别吧？\w9\w9\n这种顔色是天生的哟。\s[29]\w9\w9\n\n[half]不过，\w5在修炼地休息的时候，\w9\s[20]被当成波利打了…\w9…\w9\w9\n\s[4]真过分，有那么像吗……\e
+\0\s[5]里亚的发带，\w9是用「爱心发夹」\w5做成的哟！\w9\w9\n看到了吗？\w9\n这里有个红色桃心呢！\e
+
+//---- 谈话 ---------------------------------------------------------------------------------------------------------
+
+$Select.ForcedTalk;nonoverlap
+{$Talk}
+\0\s[8]对不起、\w9\w9\s[8]\n里亚不太会说话……\e
+\0\s[4]里亚偶尔会说一些奇怪的话……\w9\w9\n{$username}请不要介意、\w9\s[7]里亚会努力学习的！\e
+\0\s[23]休息一下吧，\w9{$username}？\e
+\0\s[24]不知道{$username}喜欢咖啡还是红茶呢？\e
+\0\s[22]里亚的话，\w9喜欢奶茶多一点…\w5…\w5…\w5…\w5…\w5\e
+\0\s[7]{$username}其实，\w9\w9从来不用日历的吧？\e
+\0\s[3]{$username}每天都会看新闻吗？\e
+\0\s[20]{$username}……\w9每天都会看QQ新闻吗？\e
+\0\s[5]里亚最近\w5想要漂亮的草帽，\w9\w9夏天快到了嘛……\w9\w9\n\n[half]\s[30]怎样才能有新草帽呢？\e
+\0\s[30]最近\w5读了什么书吗？\w9\w9\n\s[29]偶尔也跟里亚说说嘛……\e
+
+//---- 季节 -----------------------------------------------------------------------------------------------------------
+{
+{$if ((3<={$month}) && ({$month}<=5)) { {$RandomTalk_Spring} }}
+{$if ((6<={$month}) && ({$month}<=8)) { {$RandomTalk_Summer} }}
+{$if ((9<={$month}) && ({$month}<=11)) { {$RandomTalk_Autumn} }}
+{$if ((12<={$month}) || ({$month}<=2)) { {$RandomTalk_Winter} }}
+}
+$RandomTalk_Spring
+\0\s[5]春天到了呢。·w·\e
+\0\s[3]漫天的柳絮真的很麻烦啊……\w9\n抖也抖不掉。\e
+\0\s[6]春眠不觉晓，\w9\n这句话真是太有道理了…\w9\w9\n[half]\n嗯、嗯。\e
+\0\s[8]春节有的时候，\w9\w9\n真的很累马呢。
+
+$RandomTalk_Summer
+\0\s[1]夏天到了呢，\w9\w9\n适合穿短裙的季节啊。\e
+\0\s[3]天气很热呢。\e
+\0\s[6]虽然不喜欢太热，\w9\w9\s[5]但是里亚很喜欢夏天。\e
+\0\s[1]那个……\w9\n有机会的话，\w5可以一起去游泳吗？\w9\w9\n嘿嘿…\w9里亚其实…\w9\w5\s[8]不太会游泳，\w9{$username}可以拉着里亚吗？\e
+\0\s[22]夏天快到了啊……\w9\w9想吃西瓜。\w9\w9\n{$username}喜欢西瓜吗？\e
+\0\s[7]黄色的西瓜，\w5縂觉得怪怪的，\w9不太敢吃。\w9\w9\n\s[6]其实是很好吃的。\e
+\0\s[20]有白色的西瓜吗？！\w9\w9里亚没见过……\e
+\0\s[5]把西瓜\w5泡在冰冰的水里……\w9\w9很美味！！\e
+\0\s[30]今天好像说了很多次\w5西瓜的话题？\e
+
+$RandomTalk_Autumn
+\0\s[0]秋天到了呢，\w9\w9s[1]...\w9\e
+\0\s[5]食欲之秋。 \e
+
+$RandomTalk_Winter
+\0\s[2]冬天到了呢。 \e
+\0\s[6]小风吹吹\n精神抖擞。 \e
+
+
+//**** 与其他马格的互动*******************************************************************************************************
+$OnOtherGhostBooted
+\0\s[2]咦？\w9\w9是『{$reference(0)}』さん来了。\n\w9\w9\w9\s[5]欢迎。\e
+\0\s[5]是『{$reference(0)}』さん。\n\w9\w9\w9\s[5]请多多指教。\e
+
+$OnOtherGhostClosed
+\0\s[20]『{$reference(0)}』さん…\w9\w9\n消失了？！\e
+\0\s[20]呀…{$reference(0)}さん…\e
+
+$OnOtherGhostTalk,{$if ({$reference(3)}=="OnMouseDoubleClick")};nonoverlap
+\0\s[2]哇，好华丽的菜单。\e
+\0\s[2]是 {$reference(1)}さん 的菜单呢…\e
+\0\s[6]双击鼠标事件。\e
+\0\s[28]在看什麽？\e
+\0\s[28]这是……菜单？\e
+
+$OnGhostCalling
+\0\s[6]召唤『{$reference(0)}』さん！\w9\w9\nWarp Potal!!\e
+
+$OnGhostCallComplete
+\0\s[5]哇，召唤成功了！\n\n[half]\w9\w9\w9你好，\n{$reference(0)}さん。\w9\w9\n请多多指教～\e
+
+$OnGhostCalled
+\0\s[2]咦？\w9\w9这是哪里？\n\w9\w9\w9.\w5.\w5.\w5.\w5.\w5.\w5\n\s[28]是{$reference(0)}さん召唤里亚的吗？\w9\w9\w9\n\n[half]\s[5]那、\w5请多多指教！\e
+
+//**** 初回起动 *******************************************************************************************************
+
+$Firstboot
+{
+\0\s[26]Warp Portal !!\w9\w9\w9\w9\w9\n\s[5]啊、\w5您好，\w9我是\_v[voice\11.mp3]里亚。\w9\w9\n方便的话，\w9\n请告诉里亚您的名字好吗？\![open,inputbox,TeachUsernameFirst,-1]\e
+}
+
+$OnUserInput,{$if (({$reference(0)}=="TeachUsernameFirst") && ({$reference(1)}=="{$username}"))}
+{
+\0\s[5]是『{$username}』吗。\w9\w9\w9\w9{$FirstBoot_2}\e
+}
+
+$OnUserInput,{$if (({$reference(0)}=="TeachUsernameFirst") && ({$reference(1)}==""))}
+{
+\0\s[6]喔…\w9\w9知道了。\w9\s[0]\n以后再告诉里亚也可以的哟。\w9\w9\w9\w9{$FirstBoot_2}\e
+}
+
+$OnUserInput,{$if ({$reference(0)}=="TeachUsernameFirst")}
+{
+{$username={$reference(1)}}
+\0\s[0]『{$username}さん』\w4可以吗？\n\n
+\![*]\q[可以,teachusernamefirst1]\n
+\![*]\q[『{$username}』就可以,teachusernamefirst2]\n\n[half]\e
+}
+
+$Select.teachusernamefirst1
+\0\s[5]{$username={$username}さん}\0\s[0]{$username}是吗。\w9\w9\w9\w9{$FirstBoot_2}\e
+
+$Select.teachusernamefirst2
+\0\s[0]{$username}是吗。\w9\w9\w9\w9{$FirstBoot_2}\e
+
+$FirstBoot_2
+\n\n[half]\0\s[5]那么再一次…\w9\w9\n\n[half]请{$username}\w9以后多多指教。\e
+
+
+//**** 起动 ***********************************************************************************************************
+
+$Boot.Short
+{
+\0\s[30]\_v[voice\12.mp3]？\w9\w9\n怎么了呢？\e
+}
+{
+\0\s[30]\_v[voice\12.mp3]忘记了什么吗？\e
+}
+
+$BootEarlymorning;{$if ({$Phase}==2)}
+{
+\0\s[5]啊…\w9\w9\s[5]早安、\w9{$username}。\w9\w9\0\s[30]\n\n[half]这么早是怎么了呢？\e
+}
+
+$BootEarlymorning
+{
+\0\s[5]早安、\w9{$username}。\w9\w9\w9\w9\n今天很早呢。\e
+}
+
+$BootMorning;{$if ({$Phase}==2)}
+{
+\0\s[5]早安、\w9{$username}。\e
+}
+{
+\0\s[5]早安、\w9{$username}。\w9\0\s[1]\n今天也请好好加油。\e
+}
+{
+\0\s[5]{$username}、\w9早安。\e
+}
+{
+\0\s[5]早安。\e
+}
+
+$BootMorning
+\0\s[0]早安、\w9{$username}。\e
+\0\s[0]早安、\w9{$username}。\w9\w9\w9\w9\n今天也请好好加油。\e
+\0\s[0]{$username}、\w9早安。\e
+\0\s[0]早安。\e
+
+$BootDay
+\0\s[5]日安、\w9{$username}。\e
+\0\s[5]日安、\w9{$username}。\e
+\0\s[5]{$username}、\w9日安。\e
+\0\s[5]日安。\e
+
+$BootEvening;{$if ({$Goodevening}=="")}
+{
+\0\s[30]啊、\w9{$username}…\w9\w9\w9\n\n[half]嗯…\w9\w9\w9这个时候的话\w9\n应该用『日安』还是用『晚安』比较好呢？\n\n[half]
+\![*]\q[日安,Goodevening_0]\n
+\![*]\q[晚安,Goodevening_1]\n
+\![*]\q[都可以,Goodevening_2]\e
+}
+
+$Select.Goodevening_0
+{$Goodevening="日安"}\0\s[5]是这样啊。\w9\w9\n那么、\w9{$Goodevening}、\w9{$username}。\e
+
+$Select.Goodevening_1
+{$Goodevening="晚安"}\0\s[5]是这样啊。\w9\w9\n那么、\w9{$Goodevening}、\w9{$username}。\e
+
+
+$Select.Goodevening_2
+{$Goodevening={$Goodevening0}}\0\s[28]…\w9…\w9…\w9\w9\w9\w9\n那么、\w9{$Goodevening}、\w9{$username}。\e
+
+$Goodevening0
+日安
+晚安
+
+$BootEvening
+\0\s[5]欢迎回来、\w9\w9{$username}。\e
+\0\s[5]{$Goodevening}、\w9{$username}。\e
+\0\s[5]{$username}、\w9{$Goodevening}。\e
+\0\s[5]{$Goodevening}。\e
+\0\s[5]{$username}、\w9\w9\w9\n{$Goodevening}。\e
+
+$BootNight
+\0\s[5]晚安、\w9{$username}。\e
+\0\s[5]晚安。\e
+\0\s[5]{$username}、\w9\w9\w9\n晚安。\e
+
+$BootMidnight
+\0\s[30]晚安、\w9{$username}。\w9\w9\w9\w9\n这么晚是怎么了呢？\e
+\0\s[6]晚安、\w9{$username}。\w9\w9\w9\w9\n半夜了呢。\e
+\0\s[29]呼啊——\n\w9{$username}\w9\w9\还不睡吗？\e
+\0\s[29]呼啊——\n\w9{$username}，\w9\w9\熬夜对皮肤不好哟…\e
+\0\s[29]呼啊——\n\w9里亚有点困了…\e
+
+$BootMidnight.00w0
+{$BootMidnight}
+\0\s[30]啊、\w9\w9\w9晚安、\w9{$username}。\w9\w9\w9\w9\n就算是假日、\w9\n也不要太晚睡喔。\e
+
+$Boot.1/1
+\0\s[5]新年快乐！\w9\w9\n\n[half]今年也请{$username}多多指教。\e
+
+$Boot.2/14
+\0\s[28]啊、\w9{$username}。\w9\w9\n\n[half]\s[6]想要……\w9\w9\s[5]巧克力吗？\e
+\0\s[5]{$username}今天有收到巧克力吗？\e
+
+$Boot.4.9
+\0\s[5]{$username}4月9日测试。\e
+
+$Boot.5/1
+\0\s[31]{$username}，劳动节快乐。\e
+
+$Boot.12/24
+\0\s[5]Merry Christmas！\e
+\0\s[5]圣诞快乐！\e
+\0\s[1]今天是平安夜哦。\e
+
+$Boot.12/25
+\0\s[5]Merry Christmas！\e
+\0\s[5]圣诞快乐！\e
+\0\s[5]今天是圣诞节哦。\e
+
+
+
+//**** 终了 ***********************************************************************************************************
+
+$CloseEarlymorning
+\0\s[5]\_v[voice\07.mp3]好的。\w9\w9\n那么再见了。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+$CloseMorning
+\0\s[5]好的。\w9\w9\n\_v[voice\07.mp3]那么再见了。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+$CloseDay
+\0\s[5]好的。\w9\w9\n\_v[voice\07.mp3]那么再见了。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+\0\s[28]\_v[voice\12.mp3]要出门了吗？\w9\w9\s[5]\n路上小心。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+\0\s[28]\_v[voice\12.mp3]要出门了吗？\w9\w9\s[5]\n那么请路上小心。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+\0\s[28]\_v[voice\12.mp3]要出门了吗？\w9\w9\s[5]\n记得带上蓝色魔力矿石喔。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+\0\s[28]\_v[voice\12.mp3]要出门了吗？\w9\w9\s[5]\nIncrease AGI(加速术) !!\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+$CloseEvening
+\0\s[5]\_v[voice\07.mp3]好的。\w9\w9\n那么再见了。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+$CloseNight
+\0\s[5]\_v[voice\07.mp3]好的。\w9\w9\n那么再见了。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+$CloseMidnight
+\0\s[3]这么晚了吗…\w9\w9\s[0]\n那么、\w9好梦喔，{$username}。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+//**** 由最小化复原 *********
+
+$WindowStateRestoreLong
+\0\s[6]呼…\w9\w9\w9\s[3]\n还以爲被忘记了呢……\e
+
+$WindowStateRestore
+\0\s[28]…嗯。\w9\w9\n有里亚可以帮忙的地方吗？\e
+
+//**** 切换为其他Ghost 
+*********************************************************************************************
+
+//---- 不特定的Ghost -----------------------------------------------------------------------------------------------
+
+$Ghostchanging
+\0\s[27]\_v[voice\13.mp3]是『{$reference(0)}』さん吗…\w9\n\s[5]那么再见了。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+\0\s[27]\_v[voice\13.mp3]『{$reference(0)}』さん比较好吗……\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+\0\s[29]\_v[voice\13.mp3]{$username}，\w9\n很喜新厌旧吗？
+
+//---- 自己 -----------------------------------------------------------------------------------------------------------
+
+$Ghostchanging.里亚
+\0\s[5]那么、\w9\w9请稍等哦。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+\0\s[5]那么、\w9\w9里亚稍稍离开一下喔。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+//---- 自动 -----------------------------------------------------------------------------------------------------------
+
+$GhostchangingAuto
+\0\s[3]啊…\w9\w9\w9对不起。\w9\w9\n稍微有点事…\w9\w9\n失礼了。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+
+//**** 由其他Ghost切换 *******************************************************************************************
+
+//---- 不特定的Ghost -----------------------------------------------------------------------------------------------
+
+$OnGhostChanged,{$if (({$month}==1) && ({$day}==1))}
+{
+{$Boot.1/1}
+}
+
+$OnGhostChanged,{$if (({$month}==2) && ({$day}==14))}
+{
+{$Boot.2/14}
+}
+
+$OnGhostChanged,{$if (({$month}==12) && ({$day}==24))}
+{
+{$Boot.12/24}
+}
+
+$OnGhostChanged,{$if (({$month}==12) && ({$day}==25))}
+{
+{$Boot.12/25}
+}
+
+$Ghostchanged
+{
+\0\s[5]欢迎回来、\w9{$username}。
+\0\s[6]刚才在这里的，\w9\w9是{$reference(0)}さん吗？
+}
+//---- 里亚 -----------------------------------------------------------------------------------------------------------
+
+$Ghostchanged.里亚
+\0\s[6]让{$username}久等了。
+\0\s[28]\_v[voice\13.mp3]『{$reference(0)}』さん已经走了吗…
+\0\s[28]\_v[voice\12.mp3]咦？『{$reference(0)}』さん呢？
+
+//---- 橘花 -------------------------------------------------------------------------------------------------------------
+{$to=橘花050312版}
+\0\s[2]是橘花さん呢！\w9\你好。
+{$to=撅050312}
+\0\s[2]是橘花さん呢！\w9\你好。
+{$to=KiKKa_C_042506}
+\0\s[2]是橘花さん呢！\w9\你好。
+{$to=KiKKa_C}
+\0\s[2]是橘花さん呢！\w9\你好。
+{$to=撅2いゅ2007.12.31}
+\0\s[2]是橘花さん呢！\w9\你好。
+
+$Ghostchanged.橘花050312版
+\0\s[27]\_v[voice\13.mp3]{$username}…\w9\w5\n橘花さん真有那么好吗？\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+$Ghostchanged.撅050312
+\0\s[27]\_v[voice\13.mp3]{$username}…\w9\w5\n橘花さん真有那么好吗？\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+$Ghostchanged.KiKKa_C_042506
+\0\s[27]\_v[voice\13.mp3]{$username}………\w9\w5\n橘花さん真有那么好吗？\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+$Ghostchanged.撅2いゅ2007.12.31
+\0\s[27]\_v[voice\13.mp3]{$username}………\w9\w5\n橘花さん真有那么好吗？\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!
+
+//**** Shell切换 *************************************************************************************************
+
+$TalkShellchanging
+\0\s[0]换装为{$reference(0)}。
+
+$TalkShellchanged
+\0\s[3]…嗯、\w9\w9\s[3]怎么样？\n\n[half]\w9\w9\s[1]好看吗？
+
+$OnBalloonChange
+\0\s[6]对话框变更为：\n「{$reference(0)}」
+
+//**** 时报 ***********************************************************************************************************
+
+$TalkTime0
+{$TalkTimeEtc}\e
+
+$TalkTime1
+{$TalkTimeEtc}\e
+
+$TalkTime2
+{$TalkTimeEtc}\e
+
+$TalkTime3
+{$TalkTimeEtc}\e
+
+$TalkTime4
+{$TalkTimeEtc}\e
+
+$TalkTime5
+{$TalkTimeEtc}\e
+
+$TalkTime6
+{$TalkTimeEtc}\e
+
+$TalkTime7
+{$TalkTimeEtc}\e
+
+$TalkTime8
+{$TalkTimeEtc}\e
+
+$TalkTime9
+{$TalkTimeEtc}\e
+
+$TalkTime10
+{$TalkTimeTen}\e
+
+$TalkTime11
+{$TalkTimeEtc}\e
+
+$TalkTime12
+{$TalkTimeEtc}\e
+
+$TalkTime13
+{$TalkTimeEtc}\e
+
+$TalkTime14
+{$TalkTimeEtc}\e
+
+$TalkTime15
+{$TalkTimeEtc}\e
+
+$TalkTime16
+{$TalkTimeEtc}\e
+
+$TalkTime17
+{$TalkTimeEtc}\e
+
+$TalkTime18
+{$TalkTimeEtc}\e
+
+$TalkTime19
+{$TalkTimeSeventeen}\e
+
+$TalkTime20
+{$TalkTimeEtc}\e
+
+$TalkTime21
+{$TalkTimeNineteen}\e
+
+$TalkTime22
+{$TalkTimeEtc}\e
+
+$TalkTime23
+{$TalkTimeTwentythree}\e
+
+$TalkTimeEtc
+\0\s[5]叮咚～☆\w9\w9\n\s[0]现在时刻{$hour}点。
+\0\s[5]叮咚～☆\w9\w9\n已经{$hour}点了哟。
+
+$TalkTimeTen
+\0\s[5]叮咚～☆\w9\w9\n\s[0]上午１０点整。\w9\w9\n\s[30]今天有迟到吗？
+
+$TalkTimeSeventeen
+\0\s[5]叮咚～☆\w9\w9\n\s[0]下午１９点整。\w9\w9\n\s[30]还不下班吗？
+
+$TalkTimeNineteen
+\0\s[5]叮咚～☆\w9\w9\n\s[0]下午２１点整。\w9\w9\n\s[30]今天加班吗？
+
+$TalkTimeTwentythree
+\0\s[5]叮咚～☆\w9\w9\n\s[0]下午２３点整。\w9\w9\n\s[29]还有一小时就必须睡觉喔。
+
+//**** 起动时间 *******************************************************************************************************
+
+$TalkWorktimeVeryshort
+{$TalkWorktime}
+\0\s[3]工作了{$TimeWork}小时啊。\w9\n\0\s[5]辛苦了呢。
+
+$TalkWorktimeShort
+{$TalkWorktime}
+\0\s[3]里亚们连续工作{$TimeWork}小时了。\n\n\w9\w9Heal !!\w9\n\0\s[5]{$username}辛苦了。
+
+$TalkWorktimeMiddle
+{$TalkWorktime}
+\0\s[2]连续工作了{$TimeWork}小时啦。\w9\n\s[23]{$username}需要喝茶吗？
+
+$TalkWorktimeLong
+{$TalkWorktime}
+\0\s[2]过了{$TimeWork}小时还不休息吗？\w9\w9\n\s[24]…{$username}？
+
+$TalkWorktimeVerylong
+{$TalkWorktime}
+\0\s[2]已经持续了{$TimeWork}小时啦！！\w9\w9\n\s[7]{$username}快去休息，\w9\n否则\w9\s[9]里亚要生气了喔。
+
+$TalkWorktime
+\0\s[3]里亚们连续工作了{$TimeWork}小时啊。\0\s[5]辛苦了呢。
+
+//**** 表情复原 ***************************************************************************************************
+
+$TalkReturn;{$if ({$rest}=="1")}
+\0\s[29]…\w9…\w9…\e
+
+$TalkReturn;{$if ({$Phase}==2)}
+\b[-1]\0\s[0]\b[-1]\e
+\b[-1]\0\s[0]\b[-1]\e
+
+$TalkReturn
+\b[-1]\0\s[0]\b[-1]\e
+
+
+//**** 见切 *********************************************************************************************************
+
+$Mikire
+\0\s[3]{$username}很忙吗？\w9\n里亚不会打扰的。\w9\n\0\s[7]\_v[voice\01.mp3]Teleportation !!\e
+
+//---- 见切复原 ------
+$Mikirez
+\0\s[29]没关系吗？\e
+
+
+//**** 戳反应 *******************************************************************************************************
+
+//---- 戳头 ----------
+$TalkSakuraHeadClick;{$if ({$Phase}==0)};nonoverlap
+{
+\0\s[3]\_v[voice\06.mp3]…\e
+}
+{
+\0\s[3]…\w9…\w9…\e
+}
+
+$TalkSakuraHeadClick;{$if ({$Phase}==2)};nonoverlap
+{
+\0\s[7]！\w9\s[9]\n不要随便戳里亚啦！\e
+}
+{
+\0\s[2]啊！\w9\w5\s[7]会痛啦…\e
+}
+
+$TalkSakuraHeadClick;nonoverlap
+{
+\0\s[2]\_v[voice\05.mp3]…\w9\s[5]\n嘻…\e
+}
+{
+\0\s[2]\_v[voice\04.mp3]啊…\w9\s[5]\n嗯^^\e
+}
+//---- 戳脸 ---------
+$TalkSakuraHeadClick;{$if ({$Phase}==0)};nonoverlap
+{
+\0\s[9]不要随便戳里亚啦！\e
+}
+{
+\0\s[9]…会、\w9会生气噢！\w9…\e
+}
+
+$TalkSakuraFaceClick;{$if ({$Phase}==2)};nonoverlap
+{
+\0\s[2]啊…\w9\w9\s[1]\n这…\e
+}
+{
+\0\s[20]嗯…？\e
+}
+
+$TalkSakuraFaceClick;nonoverlap
+{
+\0\s[20]\_v[voice\06.mp3]呃…？\e
+}
+{
+\0\s[7]\_v[voice\10.mp3]好痛…别捏嘛\e
+}
+//---- 戳胸 ---------
+$TalkSakuraBustClick;{$if ({$Phase}==0)};nonoverlap
+{
+\0\s[20]…\e
+}
+{
+\0\s[20]…\w9…\w9…\e
+}
+
+$TalkSakuraBustClick;nonoverlap
+{
+\0\s[20]\_v[voice\02.mp3]啊！…\w9\w9\w9…\e
+}
+{
+\0\s[20]啊！…\w9\w9\w9\s[9]不、\w9不可以…＞ ＜\e
+}
+{
+\0\s[20]\_v[voice\03.mp3]！\e
+}
+{
+\0\s[20]呜！…\w9会痛嘛…\e
+}
+{
+\0\s[27]啊…\w9\w9讨厌啦…\e
+}
+//---- 戳蹄--------
+$TalkSakuraHandClick;{$if ({$Phase}==0)}
+{
+{$Mainmenu}\e
+}
+
+$TalkSakuraHandClick;{$if ({$Phase}==2)};nonoverlap
+{
+\0\s[2]\_v[voice\06.mp3]咦…？\w9\w9\s[3]\n这…\e
+}
+{
+\0\s[2]\_v[voice\06.mp3]咦…？\w9\w9\s[20]\n…\w9…\w9…\e
+}
+
+$TalkSakuraHandClick;nonoverlap
+{
+\0\s[32]\w9\w9\w9\w9\s[0]\e
+}
+//---- 其他（选单展开） 
+
+$TalkSakuraClick
+{
+{$Mainmenu}\e
+}
+
+$Select.windowsreboot
+{$exitcount=1}\0\_q6秒后重新啓动，\n取消的话请双击。\_q\_w[6000]\![raise,WindowsReboot]\e
+
+$WindowsReboot
+{$ret={$saori("ki.dll","ExitWindows","Reboot")}}
+
+$Select.windousshutdown
+{$exitcount=1}\0\_q6秒后即将関机，\n取消的话请双击。\_q\_w[6000]\![raise,WindowsShutDown]\e
+
+$WindowsShutDown
+{$ret={$saori("ki.dll","ExitWindows","ShutDown")}}
+
+$Select.ExitCancel
+\0\s[6]很危险的，\w5请不要乱玩。\e
+
+//**** 抚摸反应 *******************************************************************************************************
+
+//---- 摸头 ---------------
+$TalkSakuraHead;{$if ({$Phase}==0)};nonoverlap
+\0\s[2]\_v[voice\06.mp3]咦？\e
+\0\s[2]？\e
+\0\s[2]\_v[voice\06.mp3]啊？\e
+
+$TalkSakuraHead;nonoverlap
+\0\s[1]嗯…\e
+\0\s[20]里亚的蝴蝶结、\w9歪了吗？\e
+\0\s[1]…\w9…\w9…\e
+\0\s[20]到底、\w9怎么…\e
+\0\s[5]谢谢。\e
+\0\s[20]咦…\w9\w9里亚的头发、\w9怎么了吗？\e
+\0\s[1]嗯…\e
+\0\s[27]那个…\e
+\0\s[27]\_v[voice\14.mp3]那…\w9那个…\w9\w9\n\s[1]里亚会害羞的。\e
+
+//---- 摸脸 ---------------------------------------------------------------------------------------------------------
+$TalkSakuraFace;{$if ({$Phase}==0)};nonoverlap
+\0\s[20]唔。\e
+
+
+$TalkSakuraFace;nonoverlap
+\0\s[20]唔唔…\w9\w9\s[2]怎、\w9怎么了吗？\e
+\0\s[2]嗯？\w9\w9\s[20]\n脸上有什么吗？\e
+\0\s[7]好痒喔。\e
+\0\s[7]呜哇。\e
+\0\s[7]ぶにゅー。\e
+\0\s[7]ぷは。\e
+\0\s[4]不要捏里亚的脸啦。\e
+\0\s[4]不要一直捏里亚的脸啦。\e
+\0\s[4]痛…。\e
+
+//---- 摸胸 ---------------------------------------------------------------------------------------------------------
+$TalkSakuraBust;{$if ({$Phase}==0)};nonoverlap
+\0\s[7]唔…\e
+\0\s[9]…\w9…请不要这样。\w9…\e
+\0\s[9]不可以啦！\e
+
+$TalkSakuraBust;nonoverlap
+\0\s[9]……\w9\w9…请不要这样。\e
+\0\s[9]里亚、\w9会生气！…\e
+\0\s[1]\_v[voice\14.mp3]那…\w9那个…\e
+\0\s[9]不、\w9不可以啦！……\w9…\e
+
+//---- 摸蹄 ---------------------------------------------------------------------------------------------------------
+$TalkSakuraHand;{$if ({$Phase}==0)};nonoverlap
+\0\s[2]…\w9…\w9…\e
+\0\s[1]蹄、\w9冷吗？\e
+
+$TalkSakuraHand;nonoverlap
+\0\s[2]…\w9…\w9…\e
+\0\s[5]啊。\e
+
+//**** 主选单 *************************************************************************************************
+$Mainmenu
+{
+{$if ({$PlayStatus}==1) { \b[2]\0\s[6]目前音乐播放中。\q[★暂停,MusicStart_Pause] \q[☆停止,MusicStart_Stop] } else {  }}
+{$if ({$PlayStatus}==2) { \b[2]\0\s[28]目前音乐暂停中。\q[★继续,MusicStart_2] \q[☆停止,MusicStart_Stop] } else {  }}
+{$if ({$PlayStatus}==0) { \0\b[2]{$Mainmenu1} }}
+\n\n
+\_q\![*]\q[交谈,ForcedTalk]\_l[100,-]\![*]\q[沟通,Communicate]\n
+\![*]\q[自我介绍,Introduction]\_l[100,-]\![*]\q[对话教学,teach]\n
+\n[half]
+★ NOTE\n\n[half]
+\![*]\q[显示便条１『{$rem1}』,rem1]\n
+\![*]\q[显示便条２『{$rem2}』,rem2]\n
+\![*]\q[添加便条１,addrem1]\_l[100,-]\![*]\q[添加便条２,addrem2]\n
+\n[half]
+★ NEWS\n\n[half]
+\![*]\q[RSS盒子,Headline]\_l[100,-]\![*]\q[收取邮件,menu_biff]\n
+\![*]\q[电话簿,phonebook]\_l[100,-]\![*]\q[闹钟功能,Bell]\n
+\![*]\q[开啓浏览器,OpenBrowser]\_l[100,-]\![*]\q[开啓邮箱,OpenMailer]\n
+\![*]\q[记事日历,Calendar]\_l[100,-]\_l[100,-]\![*]\q[实时通讯,Messenger]\n
+\n
+\![*]\q[NEXT PAGE,Mainmenu2]\n
+\![*]\q[CLOSE,MenuCancel]\_q
+}
+
+$Select.Mainmenu2
+{
+{$if ({$PlayStatus}==1) { \b[2]\0\s[6]目前音乐播放中。\q[★暂停,MusicStart_Pause] \q[☆停止,MusicStart_Stop] } else {  }}
+{$if ({$PlayStatus}==2) { \b[2]\0\s[28]目前音乐暂停中。\q[★继续,MusicStart_2] \q[☆停止,MusicStart_Stop] } else {  }}
+{$if ({$PlayStatus}==0) { \b[2]这是第二页。}}
+\n\n
+\_q★ GHOST\n\n[half]
+\![*]\q[线上更新,selfupdate]\_l[100,-]\![*]\q[縂在最前,AlwaysOnTop]｜\q[取消最前,NotOnTop]\n
+\![*]\q[最小化,Trayicon]\_l[100,-]\![*]\q[马格设定,Option]\n
+\![*]\q[马格列表,GhostExplorer]\_l[100,-]\![*]\q[对话框列表,BalloonExplorer]\n
+\![*]\q[音乐播放器,MusicToPlay]\_l[100,-]\![*]\q[播放器使用帮助,MusicToPlayReadme]\n
+\n[half]
+★ SYSTEM\n\n[half]
+\![*]\q[系统咨讯,System]\_l[100,-]\![*]\q[校准时闲,TimeCorrection]\n
+\![*]\q[打扫垃圾,Dust]\_l[100,-]\![*]\q[清理系统,SystemDust]\n
+\![*]\q[重新啓动,windowsreboot]\_l[100,-]\![*]\q[关闭系统,windousshutdown]\n
+\n
+\![*]\q[PREV PAGE,ReturnMenu]\n
+\![*]\q[CLOSE,MenuCancel]\_q
+}
+
+//-----------闹钟事件(感谢凯普洛斯さん)--------------↓
+$Select.Bell
+{
+{$SetBell}
+}
+
+$SetBell
+{
+\_q\n
+\0\s[3]\b[3]里亚可以提醒{$username}哦。\w9\n\s[4]除了「每隔几分鈡提醒」的功能以外，其他都可正常使用哟。\n\n\n[half]
+\![*]闹钟模式 ：{$if ({$BellMode}==1) { \q[◆打开,BellOn] } else { \q[◇关闭,BellOff] }}\n
+\![*]提醒模式 ：{$if ({$BellRingMode}==1) { \q[◆每日提醒,BellEveryDay] } else { \q[◇只今日提醒,BellOnce] }}\n
+\![*]提醒频率 ：{$if ({$BellRingDelay}==1) { \q[◆每隔几分鈡提醒,BellDelay] } else { \q[◇只提醒一次,BellDelayOnce] }}\n
+\![*]当前设定时间为：『{$BellHour}』点『{$BellMinute}』分。\n\n
+\![*]\q[设置时间,SetBellTime]\n
+\![*]\q[设置间隔提醒时间,SetBellDelayTime]\n\n[half]
+\![*]\q[打开图形时钟,AnalogClock]\n\n[half]
+\![*]\q[BACK,ReturnMenu]\n
+\![*]\q[CLOSE,OptionEnd]
+}
+
+$Select.BellOn
+{
+{$BellMode=0}
+{$SetBell}\e
+}
+
+$Select.BellOff
+{
+{$BellMode=1}
+{$SetBell}\e
+}
+
+$Select.BellOnce
+{
+{$BellRingMode=1}
+{$SetBell}\e
+}
+
+$Select.BellEveryDay
+{
+{$BellRingMode=0}
+{$SetBell}\e
+}
+
+$Select.BellDelay
+{
+{$BellRingDelay=0}
+{$SetBell}\e
+}
+
+$Select.BellDelayOnce
+{
+{$BellRingDelay=1}
+{$SetBell}\e
+}
+
+$Select.SetBellDelayTime
+{
+\![open,inputbox,SetBellDelayTime,-1]
+\0\s[3]要延迟几分鈡提醒呢？\e
+}
+
+$OnUserInput,{$if ({$reference(0)}=="SetBellDelayTime")}
+{
+{$BellDelayTime={$reference(1)}}
+{$if (({$BellDelayTime}>=0) && ({$BellDelayTime}<=60)) { 
+\0\s[0]\b[3]明白。\w5\n间隔{$BellDelayTime}分钟提醒一次，\w5\n是这样吗？\n\n
+\![*]\q[是的,BellSetDelayTrue]\n
+\![*]\q[不对,BellSetDelayFalse]\n
+ } else { 
+\0\s[2]输入的不是0-60之间的数字。\w9\w9\n……\s[7]{$username}、\w5在和里亚开玩笑吗？\![open,inputbox,SetBellDelayTime,-1]
+ }}
+\e
+}
+
+$Select.BellSetDelayTrue
+{
+\0\s[5]里亚知道了。\w9\n每隔{$BellDelayTime}分钟会提醒{$usesrname}一次的。\e
+}
+
+$Select.BellSetDelayFalse
+{
+\![open,inputbox,SetBellDelayTime,-1]
+\0\s[6]嗯？\w5隔几分鈡提醒一次呢？\e
+}
+
+$Select.SetBellTime
+{
+\![open,inputbox,SetBellHour,-1]
+\0\s[3]请问要在几点提醒呢？\w9\w9\n\s[6]请不要捉弄里亚、输入半角数字以外的字哦。\e
+}
+
+$OnUserInput,{$if ({$reference(0)}=="SetBellHour")}
+{
+{$BellHour={$reference(1)}}
+{$if (({$BellHour}>=0) && ({$BellHour}<=23)) { 
+\0\s[6]\b[3]知道了。是在{$BellHour}点提醒{$username}吧？\n\n
+\![*]\q[是的,BellSetHourTrue]\n
+\![*]\q[不对,BellSetHourFalse]\n
+ } else { 
+\0\s[7]输入的不是0-23之间的半角数字喔。\w9\n{$username}…\w9\w9\s[4]果然是想捉弄里亚？\![open,inputbox,SetBellHour,-1]
+ }} \e
+}
+
+$Select.BellSetHourTrue
+{
+\![open,inputbox,SetBellMinute,-1]
+\0\s[3]那么要在几分的时候提醒呢？\w9\w9\n\s[6]请不要捉弄里亚、输入半角数字以外的字哦。\e
+}
+
+$OnUserInput,{$if ({$reference(0)}=="SetBellMinute")}
+{
+{$BellMinute={$reference(1)}}
+{$if (({$BellMinute}>=0) && ({$BellMinute}<=60)) { 
+\0\s[6]\b[3]知道了。是在{$BellMinute}分提醒{$username}吧？\n\n
+\![*]\q[是的,BellSetMinuteTrue]\n
+\![*]\q[不对,BellSetMinuteFalse]\n
+ } else { 
+\0\s[7]输入的不是0-60之间的半角数字喔。\w9\n{$username}…\w9\w9\s[4]果然是想捉弄里亚？\![open,inputbox,SetBellMinute,-1]
+ }}
+\e
+}
+
+$Select.BellSetHourFalse
+{
+\![open,inputbox,SetBellHour,-1]
+\0\s[7]到底要在几点的时候提醒嘛？\w9\w9\n\s[7]请不要捉弄里亚、输入半角数字以外的字哦。\e
+}
+
+$Select.BellSetMinuteTrue
+{
+\0\s[5]设定完毕。\w9\w9\n里亚会在{$BellHour}点{$BellMinute}分的时候提醒{$username}的。\e
+}
+
+$Select.BellSetMinuteFalse
+{
+\![open,inputbox,SetBellMinute,-1]
+\0\s[7]到底要在几分的时候提醒嘛？\w9\w9\n\s[7]请不要捉弄里亚、输入半角数字以外的字哦。\e
+}
+//-----------闹钟事件--------------↑
+
+// ----------图形时钟（感谢Pygmalionさん）--------------
+$Select.AnalogClock
+{
+\0\s[5]噗噜。{$saori("AnalogClock.dll","show","clock",640,480)}\n\w9\w9\w9波利时钟。\n\w9\w9右键可以打开菜单哟。\e
+}
+
+$Mainmenu1
+\b[2]\0\s[2]啊…\w5\s[5]是的。
+\b[2]\0\s[28]\_v[voice\08.mp3]好的、\w5需要做什么呢？
+\b[2]\0\s[28]什么事呢、\w5{$username}？
+\b[2]\0\s[28]主菜单打开了。
+
+$Mainmenu2
+\b[2]\0\s[28]这是第二页。
+	
+$Mainmenu3
+\b[2]\0\s[6]目前音乐播放中。\q[★暂停,MusicStart_Pause] \q[☆停止,MusicStart_Stop]
+	
+$Mainmenu4
+\b[2]\0\s[28]目前音乐暂停中。\q[★继续,MusicStart_2] \q[☆停止,MusicStart_Stop]
+
+//-----------电话簿（感谢无名氏?）--------------↓
+$Select.phonebook
+{
+\0\s[28]\b[2]{$username}要看谁的记录呢？\n\n
+\![*]\q[登录资料,inputdata]\n
+\![*]\q[清除资料,deldata]\n\n
+{$if ({$phone1_1}=="1") { \q[＊　{$name1},data1_1]\n} }
+{$if ({$phone2_1}=="1") { \q[＊　{$name2},data2_1]\n} }
+{$if ({$phone3_1}=="1") { \q[＊　{$name3},data3_1]\n} }
+\n\n[half]
+\![*]\q[返回上层,ReturnMenu]\n
+\![*]\q[结束,MenuCancel]\e
+}
+
+
+//-----------登入资料--------------↓
+$Select.inputdata
+{$inputname}
+
+$inputname
+\0\s[31]请输入姓名\n\n\![*]\q[结束,OptionEnd]\n\![open,inputbox,name,-1]
+
+$OnUserInput,{$if ({$reference(0)}=="name")}
+{
+{$name={$reference(1)}}
+{$inputphone}
+}
+
+$OnUserInput,{$if ({$reference(0)}=="name") && ({$reference(1)}==""))}
+{
+{$name=}
+{$inputphone}
+}
+
+$inputphone
+\0\s[31]请输入电话\n\n\q[结束,OptionEnd]\n\![open,inputbox,phone,-1]
+
+$OnUserInput,{$if ({$reference(0)}=="phone")}
+{
+{$phone={$reference(1)}}
+{$inputdata}
+}
+
+$OnUserInput,{$if ({$reference(0)}=="phone") && ({$reference(1)}==""))}
+{
+{$phone=}
+{$inputdata}
+}
+
+$inputdata
+\0\s[31]请输入备注\n\n\q[结束,OptionEnd]\n\![open,inputbox,data,-1]
+
+$OnUserInput,{$if ({$reference(0)}=="data")}
+{
+{$data={$reference(1)}}
+{$inputseat}
+}
+
+$OnUserInput,{$if ({$reference(0)}=="data") && ({$reference(1)}==""))}
+{
+{$data=}
+{$inputseat}
+}
+
+$inputseat
+\0\s[31]请指定位置，输入１～２０。\w9\n\如果输入已储存位址，就会把之前的资料覆盖喔。\n\n\q[取消,OptionEnd]\n\![open,inputbox,seat,-1]
+
+$OnUserInput,{$if (({$reference(0)}=="seat") && ({$reference(1)}==1))}
+{
+{$phone1_1=1}
+{$name1={$name}}
+{$phone1={$phone}}
+{$data1={$data}}
+{$name=}
+{$phone=}
+{$data=}
+\s[31]记录完成～。\w9\_q\x\b[-1]{$phonebook1}\e
+}
+
+$OnUserInput,{$if (({$reference(0)}=="seat") && ({$reference(1)}==2))}
+{
+{$phone2_1=1}
+{$name2={$name}}
+{$phone2={$phone}}
+{$data2={$data}}
+{$name=}
+{$phone=}
+{$data=}
+\s[31]记录完成～。\w9\_q\x\b[-1]{$phonebook1}\e
+}
+
+$OnUserInput,{$if (({$reference(0)}=="seat") && ({$reference(1)}==3))}
+{
+{$phone3_1=1}
+{$name3={$name}}
+{$phone3={$phone}}
+{$data3={$data}}
+{$name=}
+{$phone=}
+{$data=}
+\s[31]记录完成～。\w9\_q\x\b[-1]{$phonebook1}\e
+}
+
+
+//-----------清除资料--------------↓
+$Select.deldata
+{
+{$phone1_1=0}{$phone2_1=0}{$phone3_1=0}{$phone4_1=0}{$phone5_1=0}{$phone6_1=0}{$phone7_1=0}{$phone8_1=0}{$phone9_1=0}{$phone10_1=0}{$phone11_1=0}{$phone12_1=0}{$phone13_1=0}{$phone14_1=0}{$phone15_1=0}{$phone16_1=0}{$phone17_1=0}{$phone18_1=0}{$phone19_1=0}{$phone20_1=0}
+{$name=}
+{$phone=}
+{$data=}
+\s[31]清除完毕～。\w9\_q\x\b[-1]{$phonebook1}\e
+}
+
+$Select.data1_1
+\0\s[6]\b[2]电话簿信息：\n\n姓名： {$name1}\n电话： {$phone1}\n备注： {$data1}\n\n\![*]\q[回上层,phonebook]\n\![*]\q[结束,OptionEnd]\e
+
+$Select.data2_1
+\0\s[6]\b[2]电话簿信息：\n\n姓名： {$name2}\n\n电话： {$phone2}\n\n备注： {$data2}\n\n\![*]\q[回上层,phonebook]\n\![*]\q[结束,OptionEnd]\e
+
+$Select.data3_1
+\0\s[6]\b[2]电话簿信息：\n\n姓名： {$name3}\n\n电话： {$phone3}\n\n备注： {$data3}\n\n\![*]\q[回上层,phonebook]\n\![*]\q[结束,OptionEnd]\e
+	
+	
+//---- 音乐播放(感谢KS喵さんwww)---------------------------------------------------------------------------------------------------------
+//---------------音乐播放器简装版代码BY KS喵---------------------
+//-表情代码请按照自己的喜好修改吧-
+//-代码现在还不是非常完全-
+//-如果你有能力也有兴趣的话可以自行完善-
+//-如果要发布的话只要注明是修改自原作者的就可以-
+
+$Select.MusicToPlayReadme
+{
+\0\s[28]\b[2]这是音乐播放器的使用帮助。\n\n
+\_q
+\![*]作者：KS喵\n\n
+\![*]添加列表：\n
+　将音乐文件拖给里亚即可。\n
+　可以添加多个音乐文件。\n\n
+\![*]关于播放：\n
+　歌名中不能含有“[]、()、{}”，否则会无法播放。\n
+　暂时不支持多曲目连续播放…\n
+　(偷偷: 可以殴打作者进行新的开发哟)\n
+\n\n[half]
+\![*]\q[BACK,ReturnMenu]\_l[100,-]\![*]\q[CANCEL,MenuCancel]
+\_q\e
+}
+
+$Select.MusicToPlay
+{
+{$MusicToPlay}
+}
+
+$MusicToPlay
+{
+\c\0\b[2]\s[28]\_q音乐播放器打开了。\n\n
+//\![*]\q[浏览歌曲列表,ViewMusicList]\n
+\![*]\q[打开播放列表,PlayMusicList]\n
+\![*]\q[清空播放列表,DelMusicList]\n
+\n[half]
+{$if ({$PlayMode}==1) { \![*]\q[循环播放『是』,PlayMode1] } else { \![*]\q[循环播放『否』,PlayMode2] }}\n
+\n\n[half]
+\![*]\q[BACK,ReturnMenu]\_l[100,-]\![*]\q[CANCEL,MenuCancel]
+\e
+}
+
+//------显示的音乐--------------
+$CheckForMusic
+{
+{$calc({$ListNumberTemp}+1)}.\q[{$songname{$ListNumberTemp}},RE{$ListNumberTemp}]\n
+}
+
+//-------循环播放模式-------
+$Select.PlayMode1
+{
+{$PlayMode=0}
+{$MusicToPlay}
+}
+
+$Select.PlayMode2
+{
+{$PlayMode=1}
+{$MusicToPlay}
+}
+//-------循环播放模式-------
+
+
+$_MusicFileDrop
+{
+\0\s[0]要播放这首曲子吗？\n\n
+\![*]\q[通常播放,MusicStart_0]\n
+\![*]\q[重复播放,MusicStart_1]\n
+\![*]\q[添加到播放列表,AddToMusicList]\n
+\n[half]
+\![*]\q[CANCEL,MusicStart_Cancel]
+\e
+}
+
+//----------播放一次--------------
+$Select.MusicStart_0
+{
+{$PlayStatus=1}
+\0\s[25]\![set,balloontimeout,0]{$saori("mciaudior.dll","stop")}{$saori("mciaudior.dll","load","{$filename}")}{$saori("mciaudior.dll","play")}好的、\w9通常播放开始。
+}
+
+
+//------------重复播放--------------
+$Select.MusicStart_1
+{
+{$PlayStatus=1}
+\0\s[25]\![set,balloontimeout,0]{$saori("mciaudior.dll","stop")}{$saori("mciaudior.dll","load","{$filename}")}{$saori("mciaudior.dll","loop")}好的、\w9重复播放开始。
+}
+
+//------------继续播放--------------
+$Select.MusicStart_2
+{
+{$PlayStatus=1}
+\0\s[25]\![set,balloontimeout,0]{$saori("mciaudior.dll","play")}好的、\w9继续播放。
+}
+
+//-------------停止--------------
+$Select.MusicStart_Cancel
+{
+\0\s[29]不想听了吗？
+\0\s[29]改变主意了吗？
+}
+
+//-------------播放中停止--------------
+$Select.MusicStart_Stop
+{
+\0\s[3]{$saori("mciaudior.dll","stop")}停止播放。
+{$PlayStatus=0}
+}
+
+//-------------播放中暂停--------------
+$Select.MusicStart_Pause
+{
+{$PlayStatus=2}
+\0\s[3]{$saori("mciaudior.dll","play")}暂停播放。\n\n
+//---\![*]\q[继续,MusicStart_2]\n
+//---\![*]\q[停止,MusicStart_Stop]
+}
+
+//---------清空音乐播放列表----------
+$Select.DelMusicList
+{
+\0\s[3]确认要清空播放列表里的内容吗？\n\n[half]
+\![*]\q[OK,DelMusicList_Yes]\n
+\![*]\q[CANCEL,DelMusicList_No]
+\e
+}
+
+$Select.DelMusicList_Yes
+{
+{$MusicNumber=0}
+\0\s[6]已清空。\n
+\n[half]
+\![*]\q[BACK,MusicToPlay]\n\![*]\q[CANCEL,MenuCancel]
+\e
+}
+
+$Select.DelMusicList_No
+{
+\0\s[5]保留下来了。\n
+\n[half]
+\![*]\q[BACK,MusicToPlay]\n\![*]\q[CANCEL,MenuCancel]
+\e
+}
+//----------浏览歌曲列表-------------
+$Select.ViewMusicList
+{
+{$if ({$MusicNumber}>=0) { {$ShowMusicList} } else { {$NoList} } }
+\e
+}
+
+$ShowMusicList,{$if ({$MusicNumber}==0)}
+{
+\0\s[0]当前列表中没有歌曲。
+\n\n[half]
+\![*]\q[BACK,MusicToPlay]
+\e
+}
+
+$ShowMusicList
+{
+\0\s[0]\b[2]\_q当前歌曲列表。\_q\n\n
+{$ListNumberTemp=0}
+{$Listing}
+\n
+\![*]\q[BACK,MusicToPlay]
+\e
+}
+
+$Listing,{$if ({$ListNumberTemp}<{$MusicNumber})}
+{
+{$calc({$ListNumberTemp}+1)}.{$songname{$ListNumberTemp}}\n
+{$ListNumberTemp++}
+{$Listing}
+}
+
+
+$NoList
+{
+\0\s[3]还未添加任何歌曲。
+\e
+}
+
+//-----------------------------------------------------------------------
+//添加歌曲
+$Select.AddToMusicList
+{
+{$MusicAddModel}
+\0\s[5]添加至歌曲列表。\e
+}
+
+//列表是否被清空过的判断
+$ListDelCheck,{$if ({$MusicNumber}==0)}
+{
+{$MusicNumber=0}
+}
+
+//添加曲目代码
+$MusicAddModel
+{
+{$songNameGet}
+{$songway{$MusicNumber}={$filename}}
+{$MusicNumber++}
+}
+
+//-----获取歌曲名方法(无.后缀)-----
+$songNameGet
+{
+{$songNameTemp={$extractfilename({$filename})}}
+{$songname{$MusicNumber}={$substringl({$songNameTemp},{$calc({$length({$songNameTemp})}-4)})}}
+}
+
+//播放音乐播放列表里的曲目
+//-----显示MusicNumber次-----
+$Select.PlayMusicList
+{
+{$if ({$MusicNumber}>=0) { {$ShowPlayMusicList} } else { {$NoList} } }
+\e
+}
+
+$ShowPlayMusicList,{$if ({$MusicNumber}==0)}
+{
+\0\s[0]\b[2]当前列表中没有歌曲。
+\n\n\n
+\![*]\q[BACK,MusicToPlay]
+\e
+}
+
+$ShowPlayMusicList
+{
+\0\s[0]\b[2]\_q当前歌曲列表，点击歌曲进行播放。\n歌名中不能含有“[]、()、{}”，否则会无法播放。\n\n
+{$MusicSelectOn=1}
+{$ListNumberTemp=0}
+{$Listing2}
+\_q\n\n
+\![*]\q[BACK,MusicToPlay]
+\e
+}
+
+$Listing2,{$if ({$ListNumberTemp}<{$MusicNumber})}
+{
+{$CheckForMusic}
+{$ListNumberTemp++}
+{$Listing2}
+}
+
+//------显示的音乐--------------
+$CheckForMusic
+{
+{$calc({$ListNumberTemp}+1)}.\q[{$songname{$ListNumberTemp}},RE{$ListNumberTemp}]\n
+}
+
+//-------选择乐曲播放------------------
+//$OnChoiceSelect,{$if (({$MusicSelectOn}==1) && ({$substring({$reference(0)},1,2)}==RE))}
+
+$MusicStart
+{
+{$ShortTime={$MusicNumber}}
+{$ListNumberTemp={$length({$reference(0)})}-2}
+{$ShortTime={$substringr({$reference(0)},{$ListNumberTemp})}}
+\0\s[0]开始播放\n\_q『{$songname{$ShortTime}}』\_q
+{$Musicing}
+\e
+}
+
+$Musicing
+{
+{$PlayStatus=1}
+{$saori("mciaudior.dll","stop")}
+{$saori("mciaudior.dll","load","{$songway{$ShortTime}}")}
+{$saori("mciaudior.dll","play")}
+//\n\n
+//\![*]\q[暂停,MusicStart_Pause]\n
+//\![*]\q[停止,MusicStart_Stop]
+\e
+}
+
+//---歌曲播放结束返回事件(可实现循环播放)---
+
+//---全部曲目播放结束时循环事件----
+$OnMAAPlayFinish,{$if ({$PlayMode}==0)}
+{
+{$saori("mciaudior.dll","stop")}
+\0\s[6]播放结束了。\e
+}
+
+$OnMAAPlayFinish,{$if (({$ShortTime}=={$calc({$MusicNumber}-1)}) && ({$PlayMode}==1))}
+{
+{$saori("mciaudior.dll","stop")}
+{$ShortTime=0}
+{$Musicing}
+}
+
+$OnMAAPlayFinish,{$if (({$ShortTime}<={$calc({$MusicNumber}-1)}) && ({$PlayMode}==1))}
+{
+{$saori("mciaudior.dll","stop")}
+{$ShortTime++}
+{$Musicing}
+}
+
+$OnMAAPlayFinish
+{
+{$saori("mciaudior.dll","stop")}
+\0\s[6]播放结束了。\e
+}
+//---------------音乐播放器简装版代码BY KS喵---------------------
+//-表情代码请按照自己的喜好修改吧-
+//-代码现在还不是非常完全-
+//-如果你有能力也有兴趣的话可以自行完善-
+//-如果要发布的话只要注明是修改自原作者的就可以-
+
+//---- RSS输入------------------------------------------------------------
+
+
+//---- 对话教学 ---------------------------------------------------------------------------------------------------------
+
+$Select.teach
+{
+\0\s[5]嗯？\w8要教里亚什么呢？
+\0\s[3]\![open,inputbox,teach sen,-1]
+}
+
+$OnUserInput,{$if ({$reference(0)}=="teach sen")}
+{
+{$LanguageTeachInputTemp={$reference(1)}}
+{$save sentence {$save number Temp}={$LanguageTeachInputTemp}}
+\0\s[59]嗯……\w7\w7\n当{$username}说这句话的时候里亚应该如何回答呢？\0\s[3]
+\![open,inputbox,teach over,-1]
+\e
+}
+
+$OnUserInput,{$if ({$reference(0)}=="teach over")}
+{
+{$LanguageTeachInputTemp1={$reference(1)}}
+{$sentence answer {$save number Temp}={$LanguageTeachInputTemp1}}
+\0\s[5]当{$username}说「{$save sentence {$save number Temp}}」的时候，里亚应该回「{$sentence answer {$save number Temp}}」，里亚知道了。
+{$save number Temp++}
+{$LanguageTeachInputTemp=0}
+{$LanguageTeachInputTemp1=0}
+\e
+}
+
+//---- 临时纪录 ---------------------------------------------------------------------------------------------------------
+$Select.rem
+{
+\0\s[5]\b[2]{$sakura.name}可以帮{$username}记录一些事情在这里。\0\s[0]\n
+\![*]\q[读取记录1『{$rem1}』,rem1]\n
+\![*]\q[读取记录2『{$rem2}』,rem2]\n
+\![*]\q[添加记录1,addrem1]\n
+\![*]\q[添加记录2,addrem2]\n
+\n[half]
+\![*]\q[BACK,ReturnMenu]\n
+\![*]\q[CLOSE,OptionEnd]\e
+}
+
+$Select.rem1
+{
+\0\s[0]\b[2]{$username}在{$rem1month}月{$rem1day}日{$rem1hour}点的NOTE：\n\n{$rem1txt}\n\n
+\n[half]
+\![*]\q[BACK,ReturnMenu]\n
+\![*]\q[CLOSE,OptionEnd]\e
+}
+
+$Select.rem2
+{
+\0\s[0]\b[2]{$username}在{$rem2month}月{$rem2day}日{$rem2hour}点的NOTE：\n\n{$rem2txt}\n\n
+\n[half]
+\![*]\q[BACK,ReturnMenu]\n
+\![*]\q[CLOSE,OptionEnd]\e
+}
+
+$Select.addrem1
+{
+\0\s[0]这是第１个便条。\w9\n请输入标题。\0\s[0]\![open,inputbox,rem1,-1]
+}
+
+$Select.addrem2
+{
+\0\s[0]这是第２个便条。\w9\n请输入标题。\0\s[0]\![open,inputbox,rem2,-1]
+}
+
+$OnUserInput,{$if ({$reference(0)}=="rem1")}
+{
+{$rem1={$reference(1)}}
+\0\s[6]请输入便条的内容。\![open,inputbox,rem1txt,-1]
+}
+
+$OnUserInput,{$if ({$reference(0)}=="rem1txt")}
+{
+{$rem1txt={$reference(1)}}
+\0\s[5]{$rem1month=%month}{$rem1day=%day}{$rem1hour=%hour}记录完成～{$power-=3}\e
+}
+
+$OnUserInput,{$if ({$reference(0)}=="rem2")}
+{
+{$rem2={$reference(1)}}
+\0\s[6]请输入便条的内容。\![open,inputbox,rem2txt,-1]
+}
+
+$OnUserInput,{$if ({$reference(0)}=="rem2txt")}
+{
+{$rem2txt={$reference(1)}}
+\0\s[5]{$rem2month=%month}{$rem2day=%day}{$rem2hour=%hour}便条记录完毕。{$power-=3}\e
+}
+
+
+
+//---- 沟通 ---------------------------------------------------------------------------------------------------------
+
+$Select.Communicate
+{
+\0\s[27]里亚还什么都不会说……\w9\w9\s[5]\n{$username}可以教里亚吗？\n\n\![open,inputbox,talking,-1]\w9\w9\n按键槃上的ESC键就可以取消输入。\e
+}
+
+$OnUserInput, {$if ({$reference(0)}=="talking")}
+{
+{$inputTemp={$reference(1)}}
+\w8\w8
+{$sentence check}
+}
+
+$sentence check
+{
+{$if ({$insentence({$save sentence {$check number Temp}},{$inputTemp})}) { {$sentence right} } else { {$check again} } }
+\e
+}
+
+$sentence right
+{
+\0\s[0]{$sentence answer {$check number Temp}}
+{$check number Temp=0}
+\e
+}
+
+$check again
+{
+{$check number Temp++}
+{$if ({$check number Temp}>={$save number Temp}) { {$unknow sentence} } else { {$sentence check} } }
+\e
+}
+
+$unknow sentence
+{
+\0\s[30]嗯？\n
+\0\s[30]听不懂什么意思\w8.\w8.\w8.\w8.\w8.\w8.\e
+{$check number Temp=0}
+\e
+}
+
+$OnUserInput, {$if ({$reference(0)}=="talking")}
+{
+\0\s[30]嗯？没有什么要说的吗？\n\n\e
+}
+
+//-----------开啓浏览器-------------
+$Select.OpenBrowser
+{
+\0\s[5]默认浏览器已经开啓。
+\![open,browser]\e
+}
+
+//-----------开啓邮箱-------------
+$Select.OpenMailer
+{
+\0\s[5]默认邮箱已经开啓。\w9\n记得每天要写工作记录哟。
+\![open,mailer]\e
+}
+//-----------开啓SSP日历-------------
+$Select.Calendar
+{
+\0\s[5]SSP专用日历已经打开。
+\![open,calendar]\e
+}
+//-----------开啓SSP Messenger-------------
+$Select.Messenger
+{
+\0\s[5]SSP专用Messenger已经打开。
+\![open,messenger]
+\w9\n只要输入对方的IP地址，\w9就可以和对方进行实时通讯，\w9内容将会由马格说出。\e
+}
+
+
+//---- 自我介绍 -----------------------------
+
+$Select.Introduction
+{
+\0\s[30]\b[2]{$username}想要知道什么呢？\n\n
+\![*]\q[私马资料,Rakutori]\n
+\![*]\q[关于里亚,Readme]\n
+\![*]\q[搭载的功能,Rakutori_system]\n
+\n[half]
+\![*]\q[BACK,ReturnMenu]\e
+}
+
+$Select.Rakutori
+{
+\0\s[7]\n[2]\b[2]三围是不可能告诉{$username}的。\n\n
+\![*]\q[名字,Rakutori_name]\n
+\![*]\q[年龄,Rakutori_age]\n
+\![*]\q[爱好,Rakutori_interest]\n
+\n[half]
+\![*]\q[BACK,Introduction]\n
+\![*]\q[CLOSE,OptionEnd]\e
+}
+
+$Select.Readme
+{
+\![open,readme]这些文字\w5看起来怪怪的，\n里亚几乎\w5看不懂呢……\e
+}
+
+$Select.Rakutori_name
+\0\s[0]\b[2]嗯，里亚叫做\w5\n「里亚·紫藤月」。\w9\w9\n紫藤月是姓氏、\w9\n{$username}的话，叫「里亚」就好。\w9\w9\s[5]\n\n很棒的名字吧？\x{$Select.Rakutori}
+
+$Select.Rakutori_age
+\0\s[2]\b[2]\_v[voice\15.mp3]年龄……？\w9\w9\n\s[8]这个.\w9.\w9.\w9.\w9.\w9.\w9.\w9.\x{$Select.Rakutori}
+
+$Select.Rakutori_interest
+\0\s[0]\b[2]爱好、\w9是吗？\w9\n嗯……\w9\s[5]\n\n因爲是赞美牧师，\w9\w5所以治愈术很常用呢！\w9\w9\s[8]\n\n啊、{$username}问的是兴趣的……\w9\w9\0\x{$Select.Rakutori}
+
+$Select.Rakutori_system
+{
+\0\s[0]\b[2]里亚目前所有的功能如下：\_q\w9\n\n[half]＊ 播放音乐\n＊ 更换壁纸\n＊ 便条功能\n＊ 闹钟閙铃\n＊ 电话簿\n＊ 清理系统\n＊ 与其他马格对话\w9\w9\n\n[half]Tip 1:\n『播放音乐/更换壁纸』把需要播放/更换的音乐或者壁纸交给里亚就可以。\n\n[half]Tip 2:\n『闹钟閙铃』功能因爲原作者消失了，所以目前是未完成版(每隔*分钟提醒功能无法使用)，请多多包涵。\n\n[half]Tip 3:\n『清理系统』使用的是Windows自带的磁盘清理工具，默认路径为C盘。若{$username}的系统并非安装在C盘，里亚…\w9\w9就帮不了{$username}了。\n\n[half]Tip 4:『与其他马格对话』每次啓动后都要进入「马格设定」内重新设定一次为「ON」，才能真正的开始对话哦。\n都怪SSP默认是不进行对话的嘛…\n\_q\e
+}
+
+//---- 系统咨讯----------------------------------------------------------------------------------------------------
+$Select.System; {$if ({$daysfromfirstboot}>=30)};
+{
+\0\s[3]{$username}知道吗？\w9\w9\n
+里亚已经来了{$daysfromfirstboot}天了呢。\w9\w9\n
+\s[5]真的很感谢{$username}一直以来的照顾，\w9\w9\n
+以后也请{$username}多多指教。\w9\x{$Select.SystemNormal}
+}
+$Select.System
+{$Select.SystemNormal}
+$Select.SystemNormal
+{
+\0\s[6]现在开始检测系统状况.\w5.\w5.\w5.\w5.\n
+职业检测.\w3.\w3.\w3.\w3.正确。\n
+技能检测.\w3.\w3.\w3.\w3.正确。\n
+素质点检测.\w3.\w3.\w3.\w3.正确。\n
+当前使用者为： {$username}\w5\n\n\x
+
+\0\s[7]\b[2]里亚刚才、\w9没有在胡闹喔。\w9\n\n[half]
+\_q当前时间：\n{$year}年{$month}月{$day}日（星期{$DayofWeek_w}） {$hour}：{$minute}\n
+\_q
+\n[half]
+\_qＣＰＵ：{$cpu.vendorname} {$cpu.name} {$cpu.clockcycle}MHz\n
+ＯＳ ：{$os.name} ({$os.version})\n
+//---- 读取主机名和本地IP（感谢Pygmalionさん）---------------
+主机名: {$hostname={$saori("saori_ip.dll","host")}}{$hostname}\n
+本机IP: {$ip_address={$saori("saori_ip.dll","ip")}}{$ip_address}\n
+\n[half]
+内存使用率　　　　：{$mem_os={$saori("saori_cpuid.dll","mem.os")}}{$mem_os}％\n
+物理内存　全体　　：{$mem_phyt={$saori("saori_cpuid.dll","mem.phyt")}}{$mem_phyt}　MB\n
+物理内存　空闲　　：{$mem_phya={$saori("saori_cpuid.dll","mem.phya")}}{$mem_phya}　MB\n
+\n[half]
+平台　　　　　　　：{$Platform}\n
+\n[half]
+ＯＳ啓动时间　　　：{$elapsedhouros}小时　{$elapsedminuteos}分\n
+连续啓动时间　　　：{$elapsedhouros}小时{$elapsedminuteos}分\n
+总计啓动时间　　　：{$elapsedhourtotal}小时{$elapsedminutetotal}分\n
+\n[half]
+当前荧幕分辨率　　：\w9%screenwidth × %screenheight\n
+\n[half]\_q
+\![*]\q[BACK,ReturnMenu]\n
+\![*]\q[CLOSE,MenuCancel]\n
+}
+
+
+$DayofWeek_w
+{
+{$_dayofweek_w="日"}
+{$if ({$dayofweek}=="1") { {$_dayofweek_w="一"} }}
+{$if ({$dayofweek}=="2") { {$_dayofweek_w="二"} }}
+{$if ({$dayofweek}=="3") { {$_dayofweek_w="三"} }}
+{$if ({$dayofweek}=="4") { {$_dayofweek_w="四"} }}
+{$if ({$dayofweek}=="5") { {$_dayofweek_w="五"} }}
+{$if ({$dayofweek}=="6") { {$_dayofweek_w="六"} }}
+{$_dayofweek_w}
+}
+
+$Platform
+{
+{$platform={$saori("saori_cpuid.dll","platform")}}
+{$_platform="???"}
+{$if ({$platform}=="materia.exe") { {$_platform="Materia"} }}
+{$if ({$platform}=="crowsub.exe") { {$_platform="CROW"} }}
+{$if ({$platform}=="ssp.exe") { {$_platform="SSP"} }}
+{$_platform}
+}
+
+//---- 设定 -----------------------------------------------------------------------------------------------------------
+
+$Select.Option
+{$Option}
+
+$Option
+{
+\b[2]\![*]\q[说话频度,TalkInterval]\n
+\![*]\q[改变称呼,TeachUserName]\n
+\n[half]
+\![*]\_q消灭指示表示　　　\_q{$if ({$vanishbutton.visible}==0) { \q[◇ON,VanishbuttonSwitchON]\_q or \_q\q[◆OFF,VanishbuttonSwitchOFF] } else { \q[◆ON,VanishbuttonSwitchON]\_q or \_q\q[◇OFF,VanishbuttonSwitchOFF] }}\n
+\![*]\_q被切换时的反应　　　\_q{$if ({$mikireswitch}==0) { \q[◇ON,MikireSwitchON]\_q or \_q\q[◆OFF,MikireSwitchOFF] } else { \q[◆ON,MikireSwitchON]\_q or \_q\q[◇OFF,MikireSwitchOFF] }}\n
+\![*]\_q被重叠时的反应　　　\_q{$if ({$kasanariswitch}==0) { \q[◇ON,KasanariSwitchON]\_q or \_q\q[◆OFF,KasanariSwitchOFF] } else { \q[◆ON,KasanariSwitchON]\_q or \_q\q[◇OFF,KasanariSwitchOFF] }}\n
+\![*]\_q音效　　　　　　　　\_q{$if ({$silent}==1) { \q[◇ON,SESwitchON]\_q or \_q\q[◆OFF,SESwitchOFF] } else { \q[◆ON,SESwitchON]\_q or \_q\q[◇OFF,SESwitchOFF] }}\n
+\![*]\_q其他马格对话　　　　　\_q{$if ({$otherghost}==0) { \q[◇ON,OtherghostON]\_q or \_q\q[◆OFF,OtherghostOFF] } else { \q[◆ON,OtherghostON]\_q or \_q\q[◇OFF,OtherghostOFF] }}\n
+\n[half]
+\![*]\q[BACK,ReturnMenu]\n
+\![*]\q[CLOSE,OptionEnd]\e
+}
+
+
+
+//---- 会话频度 -------------------------------------------------------------------------------------------------------
+
+$Select.TalkInterval
+{$TalkInterval}
+
+$TalkInterval
+{
+\n[half]
+{$if ({$talkinterval}==30) { \q[◆30秒,TalkInterval_30] } else { \q[◇30秒,TalkInterval_30] }}\n
+{$if ({$talkinterval}==60) { \q[◆1分,TalkInterval_60] } else { \q[◇1分,TalkInterval_60] }}\n
+{$if ({$talkinterval}==120) { \q[◆2分,TalkInterval_120] } else { \q[◇2分,TalkInterval_120] }}\n
+{$if ({$talkinterval}==180) { \q[◆3分,TalkInterval_180] } else { \q[◇3分,TalkInterval_180] }}\n
+{$if ({$talkinterval}==300) { \q[◆5分,TalkInterval_300] } else { \q[◇5分,TalkInterval_300] }}\n
+{$if ({$talkinterval}==600) { \q[◆10分,TalkInterval_600] } else { \q[◇10分,TalkInterval_600] }}\n
+{$if ({$talkinterval}==0) { \q[◆不说话,TalkInterval_0] } else { \q[◇不说话,TalkInterval_0] }}\n
+\n[half]
+\![*]\q[BACK,Option]\e
+}
+
+$Select.TalkInterval_30
+{$talkinterval=30}{$TalkInterval}\e
+
+$Select.TalkInterval_60
+{$talkinterval=60}{$TalkInterval}\e
+
+$Select.TalkInterval_120
+{$talkinterval=120}{$TalkInterval}\e
+
+$Select.TalkInterval_180
+{$talkinterval=180}{$TalkInterval}\e
+
+$Select.TalkInterval_300
+{$talkinterval=300}{$TalkInterval}\e
+
+$Select.TalkInterval_600
+{$talkinterval=600}{$TalkInterval}\e
+
+$Select.TalkInterval_0
+{$talkinterval=0}{$TalkInterval}\e
+
+
+//---- 呼称 ---------------------------------------------------------------------------------------------------------
+
+$Select.TeachUserName
+{
+\0\s[30]不能称呼作『{$username}』\w9吗？\n\n
+\![*]\q[改变,teachusernamerun]\n
+\![*]\q[不改变,teachusernamecancel]\e
+}
+
+$Select.teachusernamerun
+{$_username={$username}}\0\s[30]那么、\w5如何称呼好呢？\![open,inputbox,teachusername,-1]
+
+$OnUserInput,{$if (({$reference(0)}=="teachusername") && ({$reference(1)}=={$username}))}
+\0\s[2]咦…\w9？\w9\s[29]\n放弃了吗？\e
+
+$OnUserInput,{$if (({$reference(0)}=="teachusername") && ({$reference(1)}==""))}
+\0\s[29]……？\w9\w9\n是传说中的\w9『名无しさん』吗？\w9\e
+
+$OnUserInput,{$if ({$reference(0)}=="teachusername")}
+{
+{$username={$reference(1)}}
+{
+\0\s[30]『{$username}さん』\w4可以吗？\n\n
+\![*]\q[可以,teachusername1]\n
+\![*]\q[称『{$username}』就行了,teachusername2]\n
+\n[half]
+\![*]\q[算了,teachusername3]\e
+}
+
+$Select.teachusername1
+\0\s[5]{$username={$username}さん}是吗…\w9\w9\n\n\0\s[6]好的。\w9\w9\n\s[5]以后就称呼为『{$username}』\w9了哟。\e
+
+$Select.teachusername2
+\0\s[6]好的。\w9\w9\n\s[5]以后就称呼为『{$username}』\w9了哟。\e
+
+$Select.teachusernamecancel
+\0\s[6]好的。\w9\w9\n\s[5]那么就和目前一样用『{$username}』\w9来称呼了哟。\e
+
+$Select.teachusername3
+{$username={$_username}}\0\s[5]是、\w9依然称呼为『{$username}』。\e
+
+//---- 其他设定 -----------------------------------------------------------------------------------------------------------
+
+$Select.VanishbuttonSwitchON
+{$vanishbutton.visible=1}{$Option}\e
+
+$Select.VanishbuttonSwitchOFF
+{$vanishbutton.visible=0}{$Option}\e
+
+$Select.MikireSwitchON
+{$mikireswitch=1}{$Option}\e
+
+$Select.MikireSwitchOFF
+{$mikireswitch=0}{$Option}\e
+
+$Select.KasanariSwitchON
+{$kasanariswitch=1}{$Option}\e
+
+$Select.KasanariSwitchOFF
+{$kasanariswitch=0}{$Option}\e
+
+$Select.SESwitchON
+{$silent=0}{$Option}\e
+
+$Select.SESwitchOFF
+{$silent=1}{$Option}\e
+
+$Select.OtherghostON
+{$otherghost=1}\![set,otherghosttalk,true]{$Option}\e
+
+$Select.OtherghostOFF
+{$otherghost=0}\![set,otherghosttalk,false]{$Option}\e
+
+//---- BACK -----------------------------------------------------------------------------------------------------------
+
+$Select.ReturnMenu
+{$Mainmenu}
+
+//---- 设定终了 -------------------------------------------------------------------------------------------------------
+
+$Select.OptionEnd
+\0\s[6]设定完毕。\e
+
+//---清除系统盘垃圾---------------------------
+$Select.SystemDust,{$if ({$reference(0)}==SystemDust)}
+{
+\0\s[31]清理开始！\w9请选择需要清理的驱动器。
+\![open,file,"C:\WINDOWS\system32\cleanmgr.exe"]
+\w9\w9\w9\w9\w9\w9\n使用的是Windows自带的磁盘清理工具，\n
+默认路径为C盘。若{$username}的系统并非安装在C盘，\n
+里亚…\w9\w9就帮不了{$username}了。\n
+\e
+}
+
+
+//---- 清空垃圾箱 -----------------------------------------------------------------------------------------------
+
+$Select.Dust
+{
+{$DustClean}\e
+}
+
+$DustClean;{$if ({$silent}==0)}
+{
+\0\s[0]了解。\w9\w9\s[31]\b[-1]\w9\w9\w9\![raise,se_0]\![raise,_Dust]\w9\w9\w9\s[22]\c完成了、\w9让{$username}久等了。\e
+\0\s[0]好的。\w9\n那么、\w5请稍等。\w9\w9\s[31]\b[-1]\w9\w9\w9\![raise,se_0]\![raise,_Dust]\w9\w9\w9\s[22]\c让{$username}久等了。\e
+}
+
+$DustClean
+{
+\0\s[0]了解。\w9\w9\s[31]\b[-1]\w9\w9\w9\![raise,_Dust]\w9\w9\w9\s[31]\c…\w9嗯。\w9\w9\w9\s[22]\n让{$username}久等了。\e
+\0\s[0]好的。\w9\n那么、\w5请稍等。\w9\w9\s[31]\b[-1]\w9\w9\w9\![raise,_Dust]\w9\w9\w9\s[22]\c…\w9嗯。\w9\w9\w9\s[22]\n让{$username}久等了。\e
+}
+
+$DustEmpty
+\0\s[0]了解。\w9\w9\w9\w9\w9\w9\w9\w9\s[29]\c可是……\w9\w9\n好像已经干净了呢。\e
+
+$_Dust
+{$ret={$saori("gomi.dll","-fs")}}
+
+$se_0
+{$saori("mciaudior.dll","load","eye.mid")}{$saori("mciaudior.dll","play")}
+
+//$NumberOfDust
+//{$numberofdust={$saori("gomi.dll","-n")}}
+
+//$Select.Dust_test
+//{$numberofdust={$saori("gomi.dll","-n")}}{$numberofdust}\e
+
+
+//---- GhostExplorer ---------------------------------------------------------------------------------------
+
+$Select.GhostExplorer
+\![open,ghostexplorer]\e
+
+//---- BalloonExplorer ---------------------------------------------------------------------------------------
+
+$Select.BalloonExplorer
+\![open,balloonexplorer]\e
+
+//---- CANCEL -----------------------------------------------------------------------------------------------------------
+$Select.MenuCancel
+\0\s[3]关闭了。\e
+\0\s[6]关闭了。\e
+\0\s[29]…\w9…\e
+\0\s[30]怎么了呢？\e
+\0\s[20]咦？\e
+
+//**** 输入超时 ***********************************************************************************************
+
+$InputTimeout
+{
+\0\s[7]…\w9怎么不理里亚？\e
+}
+//**** 选择超时 *********************************************************************************************
+
+$TalkTimeout
+{
+\0\s[7]那个…\w9还在吗？\e
+}
+{
+\0\s[20]有在听吗？\w9{$username}。\e
+}
+
+//**** 最大最小化/最上层*************************************************************************************************
+$Select.AlwaysOnTop,{$if ({$reference(0)}=="AlwaysOnTop")}
+\0\s[5]收到。\w6最前排确认。\![set,windowstate,stayontop]\e
+
+$Select.NotOnTop,{$if ({$reference(0)}=="NotOnTop")}
+\0\s[4]……知道了。\![set,windowstate,!stayontop]\e
+
+$Select.Trayicon,{$if ({$reference(0)}=="Trayicon")}
+\0\s[20]Warp Potal !!\w9\s[26]\![set,windowstate,minimize]
+
+
+//**** 信件查询 *************************************************************************************************
+$Select.menu_biff,{$if ({$reference(0)}=="menu_biff")}
+\0\s[0]\![biff]\e
+
+$TalkMailstart
+\0\s[0]那么、检查\n「\_q{$reference(2)}\_q」\n上的邮件。\e
+
+$TalkNoMail
+\0\s[4]抱歉…\w9\w9\s[0]\n没有任何邮件。\e
+\0\s[4]嗯…\w9\w9\s[0]\n０封邮件。\e
+
+$TalkGottaMail
+\0\s[6]来了{$reference(0)}封邮件喔。\w9\w9\n其中{$reference(3)}封是新邮件。\w9\w9\n\n[half]\_q邮件縂容量：{$reference(1)}Byte\_q\n\n[half]\s[30]需要打开默认邮箱吗？\n\n[half]\![*]\q[打开邮箱,OpenMailer]\n\![*]\q[取消,Menucancel]\e
+
+$TalkNoMail2
+\0\s[4]嗯…\w9\w9\s[0]\n似乎没有新邮件喔。\e
+
+$TalkGottaMail2
+\0\s[5]有新邮件，\w9\w9\n共{$NewMail}封。\n\n[half]\_q邮件总数：{$reference(0)}封；\n邮件縂容量：{$reference(1)}Byte\_q\n\n[half]\s[30]需要打开默认邮箱吗？\n\n[half]\![*]\q[打开邮箱,OpenMailer]\n\![*]\q[取消,Menucancel]\e
+
+$TalkMailtimeout
+\0\s[2]唔～\w9\w9\w9\n无法执行。\w9\w9\n网速似乎太慢了。\e
+
+$TalkMailkick
+\0\s[2]唔～\w9\w9\w9\n无法执行。\w9\w9\s[4]\n密码正确吗？\e
+
+$TalkMaildefect
+\0\s[2]唔～\w9\w9\w9\n无法执行。\w9\w9\s[4]\n有正确的设定吗？\e
+
+$TalkMailError
+\0\s[2]唔～\w9\w9\w9\n无法执行。\e
+
+//**** 调整时间 *****************************************************************************************************
+
+$Select.TimeCorrection,{$if ({$reference(0)}=="TimeCorrection")}
+\0\s[0]\![executesntp]
+
+$TalkSNTPstart
+\0\s[0]那么、\w9现在确认正确时间。\e
+
+$TalkSNTPcompare
+\0\s[6]嗯…\w9\n\n[half]\_qSNTP：{$DispTimeSNTPj}\nLocal：{$DispTimeLOCALj}\_q\n\n[half]\w9\w9误差{$reference(3)}秒。\w9\w9\s[0]\n调整成正确时间。\6\e
+
+$TalkSNTPcompareNolag
+\0\s[0]已经调整好了喔。\e
+
+$TalkSNTPfailed
+\0\s[3]无法确认…\n通过服务器：{$reference(0)}\e
+
+
+//**** 网路更新 ***********************************************************************************************
+$Select.selfupdate,{$if ({$reference(0)}=="selfupdate")}
+\0\s[5]\![updatebymyself]
+
+$TalkUpdatebegin
+\0\s[5]又可以更新了，\w9\n太好了！\e
+\0\s[5]经常更新是很好的习惯哟。\e
+\0\s[5]谢谢{$username}一直爲里亚着想。\e
+
+$TalkUpdateready
+\0\s[6]有{$temp}个喔。
+
+$TalkUpdatecomplete
+\0\s[0]完成了。\e
+
+$TalkUpdatenoupdate
+\0\s[3]呜…\w5好像没有更新。\e
+\0\s[4]好失望……没有更新。\e
+\0\s[4]呜呜……没有更新。\e
+\0\s[4]怎么还是没有更新……\e
+
+$TalkUpdatefailtimeout
+\0\s[30]资料未传达。\w9\w9\s[4]\n更新停止了。\e
+
+$TalkUpdatefailmd5
+\0\s[30]MD5不合。\w9\w9\s[4]\n更新停止了。\e
+
+$TalkUpdatefail404
+\0\s[30]error404：找不到文件。\w9\w9\s[4]\n更新停止了。\e
+
+$TalkUpdatefail403
+\0\s[30]error403：无法连接服务器。\w9\w9\s[4]\n更新停止了。\e
+
+$TalkUpdatefailetc
+\0\s[30]Error「{$reference(0)}」。\w9\w9更新失败了。\e
+
+$TalkDownloadbegin
+\0\s[6]更新文件\n\n[half]\_q{$reference(0)}\_q。\e
+
+$TalkMD5Begin
+\0\s[6]MD5确认中。\e
+
+$TalkMD5Complete
+\0\s[6]\_q{$reference(1)}\n{$reference(2)}\_q \n\n[half]一致。\e
+
+$TalkMD5Fail
+\0\s[30]\_q{$reference(1)}\n{$reference(2)}\_q \n\n[half]\s[3]唔？\e
+
+//**** 滞怠 ***********************************************************************************************************
+
+$TalkNetworkheavy
+\0\s[4]网络好渣……\e
+
+$OnNetworkStatusChange
+\0\s[6]网络连接状态改变。\_q\n\n目前状态：{$reference(0)}\n当前IP：{$reference(1)}\_q\e
+
+//**** Headline *********************************************************************************************
+$Select.Headline,{$if ({$reference(0)}=="Headline")}
+\0\s[28]要看哪个网站的新闻呢？\n\s[6]\![open,headlinesensorexplorer]\w9\w9\n\n已经打开Headline列表。
+
+
+$TalkHeadlineBegin
+\0\s[6]读取『{$reference(0)}』 的Headline…
+
+$TalkHeadlineNoupdate
+\0\s[4]好像没有更新。
+
+$TalkHeadlineFailed
+\0\s[28]唔～\w9「{$reference(0)}」Error.\n无法执行。
+
+$TalkHeadlineMiss
+\0\s[4]唔～\w9\w9\w9\n无法执行。\w9\n解析失败了。
+
+$TalkHeadlineError
+\0\s[4]『{$reference(0)}』发生错误、\w9\w9\n无法执行。
+
+$TalkHeadlineFirst
+\0\b[2]\s[0]\_q『{$reference(0)}』的Headline。\_q
+
+$TalkHeadlineNext
+\0\b[2]\s[0]\_q『{$reference(0)}』的Headline。\_q
+
+$TalkHeadlineChoice
+\![*]\q0[][NEXT PAGE]\![*]\q1[{$JumpURL}][进入网站]\![*]\q2[Cancel][不进入网站]
+
+$TalkHeadlineChoiceEnd
+\![*]\q0[{$JumpURL}][进入网站]\![*]\q1[Cancel][不进入网站]
+
+
+//**** 在线记事更新 ************************************************************************************************
+$OnSchedule5MinutesToGo
+\0\s[2]\b[2]叮咚～☆\w9\w9\n这里是记事提醒。\w9\w9\s[6]\n\n[half]\_q种类：{$reference(0)}\n标题：{$reference(1)}\n备忘：{$reference(2)}\n\n[half]记述：{$reference(3)}\n\n\_q\![*]\q[关闭,MenuClose]
+
+$OnScheduleRead
+\0\s[6]\b[2]记事内容。\w9\w9\n\n[half]\_q种类：{$reference(0)}\n标题：{$reference(2)}\n备忘：{$reference(1)}\n\n[half]记述：{$reference(3)}\_q\n\n\![*]\q[关闭,MenuClose]
+
+$OnSchedulesenseBegin
+\0\s[6]正在取得在线记事...\nFrom {$reference(0)}.
+
+$OnSchedulesenseComplete
+\0\s[5]取得成功了！\nFrom {$reference(0)}.\n\n[half]有{$reference(1)}条记事，\w9要记得哟。
+
+$OnSchedulesenseFailure
+\0\s[4]取得失败…\n{$reference(0)} Error.\n\n[half]有问题发生，意外中止。
+
+$OnSchedulepostBegin
+\0\s[6]发送当前记事至：{$reference(0)}。
+
+$OnSchedulepostComplete
+\0\s[5]发送完毕。
+
+
+
+
+//**** nar安装 ************************************************************************************************
+
+$TalkInstallbegin
+\0\s[2]收到讯息，准备安装。
+
+$TalkInstall
+\0\s[0]『{$InstallName}』安装完毕。
+
+$TalkInstallshell
+\0\s[5]Shell『{$InstallName}』\n\n[half]植入确认。
+
+$TalkInstallghost
+\0\s[3]Ghost『{$InstallName}』\n\n[half]植入确认。
+
+$TalkInstallplugin
+\0\s[5]Plugin『{$InstallName}』\n\n[half]配备完成。
+
+$TalkInstallheadline
+\0\s[5]Headline『{$InstallName}』\n\n[half]输入完毕。
+
+$TalkInstallballoon
+\0\s[5]Balloon『{$InstallName}』\n\n[half]植入确认。
+
+//---- 安装 -----------------------------------------------------------------------------------------------
+
+$TalkInstallfail
+\0\s[3]好像失败了…\e
+
+$TalkInstallfailunlha32
+\0\s[3]好像失败了…\w9\w9\s[20]\n\n[half]有『unlha32.dll』吗？
+
+
+$TalkInstallrefuse
+\0\s[3]这是『{$reference(0)}』さん的…\w9\w9\n请交给本马。
+
+
+//**** 消灭 ***********************************************************************************************************
+
+$TalkVanishSelecting
+\0\s[2]咦？！…\w9…\w9…\n\n啊……\e
+
+$TalkVanishSelected
+\0\s[3]……\w9\w9……\w9\w9……\w9\w9……\w9\w9\n\n\s[27]里亚、\w9\w9有什么\w9做得不好的地方吗……\w9\w9\n\n对不起……\w9\w9给{$username}添麻烦了…\w9\w9\n再见了。\w9\w9\w9\w9\n\w9\w9\nWarp Potal !!\s[26]\w9\w9\e
+
+$TalkVanishCancel
+\0\s[28]…\w9哈、\w9哈啊……\e
+\0\s[4]请、\w9请不要随便开玩笑。\e
+
+$TalkVanishButtonHold
+\0\s[27]…\w9待在这里也没有关系吗？\e
+
+$TalkVanished
+\0\s[2]『{$reference(0)}』さん消失了？\e
+\0\s[3]『{$reference(0)}』さん…\w9\w9\w9\n被「转学」了吗？\e
+
+//**** 档案Drop ***********************************************************************************************
+
+$FileDropping
+\0\s[2]咦？\e
+
+$OnTextDrop
+\0\s[6]\b[2]内容：\n\n[half]{$reference(0)}\e
+
+//**** URL档案Download ****************************************************************************************
+
+$TalkDownload
+\0\s[6]下载中…\n\n[half]\_qＵＲＬ：{$reference(0)}\_q
+
+$TalkDownloadFail
+\0\s[3]很抱歉…\w9\w5\n下载失败了。
+
+//**** 壁纸变更 *******************************************************************************************************
+
+$_PictureFileDrop
+{
+\0\s[0]嗯、\w9\w9要把这个设定为壁纸吗？\n\n
+\![*]\q[放在中央,SetWallpaper_0]\n
+\![*]\q[平铺,SetWallpaper_1]\n
+\![*]\q[拉伸,SetWallpaper_2]\n\n[half]
+\![*]\q[不要,SetWallpaper_Cancel]\e
+}
+
+$Select.SetWallpaper_0
+{$ret={$saori("exec.dll","norm","set_wall_paper.exe", "{$filename}" ,"0")}}\0\s[0]嗯…\w9\w9\n像这样子吗？\e
+
+$Select.SetWallpaper_1
+{$ret={$saori("exec.dll","norm","set_wall_paper.exe", "{$filename}" ,"1")}}\0\s[0]嗯…\w9\w9\n像这样子吗？\e
+
+$Select.SetWallpaper_2
+{$ret={$saori("exec.dll","norm","set_wall_paper.exe", "{$filename}" ,"2")}}\0\s[0]嗯…\w9\w9\n像这样子吗？\e
+
+$Select.SetWallpaper_Cancel
+\0\s[0]那么、\w9停止变更壁纸。\e
+
+//**** nar档案作成 ************************************************************************************************
+
+$TalkNarCreating
+\0\s[6].nar文件制成中……
+
+$TalkNarCreated
+\0\s[5]太好了！\w9\w9\n顺利完成了。
+
+//**** 升级?资料档案作成 *******************************************************************************
+
+$TalkUpdateCreating
+\0\s[6]『update2.dau』文件制成中……
+
+$TalkUpdateCreated
+\0\s[5]太好了！\w9\w9\n顺利完成了。
+
+//**** 歌反应 *******************************************************************************************************
+
+$TalkWinampplay
+{
+//\0\s[0]?{$reference(0)}
+{$saori("scribble.dll","clear")}
+{$saori("scribble.dll","font_color","92","82","128")}
+{$saori("scribble.dll","font_size","20")}
+{$saori("scribble.dll","font_face","Verdana")}
+{$saori("scribble.dll","font_bold","1")}
+{$saori("scribble.dll","text","50","710","?{$reference(0)}")}\e
+//\![raise,ScreenText_winamp,"{$reference(0)}"]\e
+}
+
+$ScreenText_winamp
+{$saori("scribble.dll","text","50","710","?{$reference(0)}")}
+
+
+//**** SSTP中断 ***************************************************************************************************
+
+$TalkSSTPbreak
+\0\s[3]SSTP受信被中断。\e
+
+//**** SSTP Blacklist ***********************************************************************************
+
+$TalkBlacklist
+\0\s[31]IP地址「{$reference(0)}」被加入了blacklist.txt。\e
+
+//**** 桌面尺寸变更 *************************************************************************************
+
+$TalkDisplayChange
+\0\s[0]荧幕尺寸变更为{$DisplayWidth} × {$DisplayHeight}\n\n{$DisplayBpp}bit color。\e
+
+//**** 各类反应事件 *************************************************************************************
+$OnClockTime
+\0\s[0]当前时间：\n{$reference(0)}：{$reference(1)}：{$reference(2)}\e
+
+$OnRecommendsiteChoice
+\0\s[6]点选了「{$reference(0)}」。\n位址：{$reference(1)}\e
+
+$OnScreenSaverStart
+\0\s[2]哇，要变黑了！\e
+
+$OnScreenSaverEnd
+\0\s[2]哇…！回来了\e
+
+$OnShellScaling
+\0\s[7]噗滋。\w9\w9\w9\n\s[2]坐标比率变成了\n{$reference(0)},{$reference(2)}。\e
+
+$OnShellScaling,{$if ({$reference(1)}=="100") && ({$reference(3)}=="100")}
+\0\s[2]噗滋。\w9\w9\w9\n变回原样了。\e
+
+$OnSysResume
+\0\s[28]啊。\w9\w9\w9\w9\n刚才不小心睡着了……\e
+
+$OnWebsiteUpdateNotify
+\0\s[5]「{$reference(0)}」有更新了喔！\n\w9\w9\n[half]\_q最终更新：{$reference(1)}\n更新内容：{$reference(2)}\_q\e

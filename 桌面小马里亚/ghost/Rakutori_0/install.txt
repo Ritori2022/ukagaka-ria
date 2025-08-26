@@ -1,0 +1,14 @@
+charset,GB2312
+type,ghost
+name,¿Ô—«
+directory,Rakutori
+script,\0\s[5]∞°‡ﬁ£°\e
+refresh,true
+refreshundeletemask,savefile.sav:pointfile.sav
+
+balloon.directory,rakutori_balloon
+balloon.source.directory,rakutori_balloon
+balloon.refresh,true
+
+calendar.skin.directory,rakutori_calendar
+calendar.skin.source.directory,rakutori_calendar

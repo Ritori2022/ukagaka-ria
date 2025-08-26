@@ -1,0 +1,20 @@
+charset,GB2312
+shiori.encoding,GB2312
+shiori.forceencoding,1
+
+name,桌面马格:里亚v0.33
+type,ghost
+
+sakura.name,里亚
+kero.name,無
+ballon,for Rakutori
+default.balloon.path,rakutori_balloon
+craftman,CatFish
+craftmanw,紫藤月
+craftmanurl,http://pony.town
+homeurl,http://cat-fish.net/ssp/rakutori/update/ghost/master/
+info.sakura.reading,紫藤月
+info.distributionurl,http://cat-fish.net/ssp/rakutori/
+info.narurl,http://cat-fish.net/ssp/rakutori/Rakutori.nar
+icon,Rakutori.ico
+shiori,misaka.dll

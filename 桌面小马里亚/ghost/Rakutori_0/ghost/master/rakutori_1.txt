@@ -1,0 +1,642 @@
+#_Common
+{$if ({$mode}==0)}
+//**** 时间计测 *******************************************************************************************************
+
+$TimeCalc
+{
+{$timecalcl={$timecalcn}}
+{$timecalcn={$calc(({$daysfromfirstboot}*24*60)+({$hour}*60)+{$minute})}}
+{$timecalcs={$timecalcn}-{$timecalcl}}
+}
+
+//**** 初回起动 *******************************************************************************************************
+
+$OnFirstBoot
+{
+{$timecalcn=({$daysfromfirstboot}*24*60)+({$hour}*60)+{$minute}}{$Firstboot}\e
+}
+//**** 起动 ***********************************************************************************************************
+$_OnBoot; {$if (7<={$daysfromlastupdate})};
+\s[29]\0差不多該更新一下了吧？\e
+
+$OnBoot
+{
+{$PlayStatus=0}
+{$TimeCalc}
+{$HourZone}
+{$temp1={$month}}{$if ({$temp1}<=9) { {$temp1="0{$temp1}"} }}
+{$temp2={$day}}{$if ({$temp2}<=9) { {$temp2="0{$temp2}"} }}
+{$temp3={$dayofweek}}{$temp3="w{$temp3}"}
+{$_talk="{$Boot}"}
+{$temp={$Boot{$timezone}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot.0{$temp3}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot.00{$temp2}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot.{$temp1}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot.{$temp1}00{$temp3}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot.{$temp1}{$temp2}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot{$timezone}.00{$temp3}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot{$timezone}.00{$temp2}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot{$timezone}.{$temp1}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot{$timezone}.{$temp1}{$temp3}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot{$timezone}.{$temp1}{$temp2}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Boot.Short}}
+{$if (({$length({$temp})}>0) && ({$timecalcs}<=3)) { {$_talk={$temp}} }}
+{$temp={$Boot{$timezone}.Short}}
+{$if (({$length({$temp})}>0) && ({$timecalcs}<=3)) { {$_talk={$temp}} }}
+{$temp={$Boot.Long}}
+{$if (({$length({$temp})}>0) && (10080<={$timecalcs})) { {$_talk={$temp}} }}
+{$temp={$Boot{$timezone}.Long}}
+{$if (({$length({$temp})}>0) && (10080<={$timecalcs})) { {$_talk={$temp}} }}
+{$_talk}\w9\w9\e
+}
+
+//**** 终了 ***********************************************************************************************************
+
+$OnClose
+{
+{$TimeCalc}
+{$HourZone}
+{$temp1={$month}}{$if ({$temp1}<10) { {$temp1="0{$temp1}"} }}
+{$temp2={$day}}{$if ({$temp2}<10) { {$temp2="0{$temp2}"} }}
+{$temp3={$dayofweek}}{$temp3="w{$temp3}"}
+//{$_talk="{$Close}"}
+{$temp={$Close{$timezone}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close.00{$temp3}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close.00{$temp2}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close.{$temp1}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close.{$temp1}{$temp3}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close.{$temp1}{$temp2}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close{$timezone}.00{$temp3}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close{$timezone}.00{$temp2}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close{$timezone}.{$temp1}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close{$timezone}.{$temp1}{$temp3}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close{$timezone}.{$temp1}{$temp2}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$Close.Short}}
+{$if (({$length({$temp})}>0) && ({$timecalcs}<=3)) { {$_talk={$temp}} }}
+{$temp={$Close{$timezone}.Short}}
+{$if (({$length({$temp})}>0) && ({$timecalcs}<=3)) { {$_talk={$temp}} }}
+{$intimacy+=1}
+{$_talk}\w9\w9
+{$ValClear}
+\-
+\e
+}
+
+//**** 时间帯判定 *****************************************************************************************************
+
+$HourZone
+{
+{$if ((4<={$hour}) && ({$hour}<=6)) { {$timezone="Earlymorning"} }}
+{$if ((7<={$hour}) && ({$hour}<=10)) { {$timezone="Morning"} }}
+{$if ((11<={$hour}) && ({$hour}<=16)) { {$timezone="Day"} }}
+{$if ((17<={$hour}) && ({$hour}<=18)) { {$timezone="Evening"} }}
+{$if ((19<={$hour}) && ({$hour}<=23)) { {$timezone="Night"} }}
+{$if ((0<={$hour}) && ({$hour}<=3)) { {$timezone="Midnight"} }}
+}
+
+//**** 最小化 *********************************************************************************************************
+
+$OnWindowStateMinimize
+{$minimize=1}{$minimizetime=0}\e
+
+//**** 最小化から复帰 *************************************************************************************************
+
+$OnWindowStateRestore;{$if ({$minimizetime}>=60)}
+{$minimize=0}{$WindowStateRestoreLong}\e
+
+$OnWindowStateRestore
+{$minimize=0}{$WindowStateRestore}\e
+
+//**** 他のゴーストへ変更 *********************************************************************************************
+
+$OnGhostChanging
+{
+{$TimeCalc}
+{$_talk={$Ghostchanging}}
+{$temp={$Ghostchanging.{$reference(0)}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$GhostchangingAuto}}
+{$if (({$length({$temp})}>0) && ({$reference(1)}=="automatic")) { {$_talk={$temp}} }}
+{$temp={$GhostchangingAuto.{$reference(0)}}}
+{$if (({$length({$temp})}>0) && ({$reference(1)}=="automatic")) { {$_talk={$temp}} }}
+{$_talk}
+{$ValClear}\w9\w9
+}
+
+//**** 切换人格完毕 *****************************************************************************************
+
+
+//**** シェル切り替え *************************************************************************************************
+
+$OnShellChanging
+{$TalkShellchanging}
+
+$OnShellChanged
+{$TalkShellchanged}
+
+//**** 消灭指示 *******************************************************************************************************
+
+$OnVanishSelecting
+{$TalkVanishSelecting}
+
+//---- 确认时YES选択 --------------------------------------------------------------------------------------------------
+
+$OnVanishSelected
+{$TalkVanishSelected}
+
+//---- 确认时NO选択 ---------------------------------------------------------------------------------------------------
+
+$OnVanishCancel
+{$TalkVanishCancel}
+
+//---- 消灭引き留め ---------------------------------------------------------------------------------------------------
+
+$OnVanishButtonHold
+{$TalkVanishButtonHold}
+
+//---- 直前のゴースト消灭 ---------------------------------------------------------------------------------------------
+
+$OnVanished
+{$TalkVanished}
+
+//**** 时报 ***********************************************************************************************************
+//----闹钟打开模式，只今天提醒，只提醒一次。
+$OnMinuteChange,{$if (({$BellMode}==1) && ({$hour}=={$BellHour}) && ({$minute}=={$BellMinute}) && ({$BellRingMode}==0) && ({$BellRingDelay}==0))}
+{
+\0\s[2]{$BellHour}點{$BellMinute}分到了，\w9{$username}。\e
+}
+
+//----闹钟打开模式，每天提醒哦，只提醒一次。
+$OnMinuteChange,{$if (({$BellMode}==1) && ({$hour}=={$BellHour}) && ({$minute}=={$BellMinute}) && ({$BellRingMode}==1) && ({$BellRingDelay}==0))}
+{
+\0\s[2]{$BellHour}點{$BellMinute}分到了，\w9{$username}。\e
+}
+
+//----闹钟打开模式，只今天提醒，隔几分钟提醒。
+$OnMinuteChange,{$if (({$BellMode}==1) && ({$hour}=={$BellHour}) && ({$minute}=={$BellMinute}) && ({$BellRingMode}==0) && ({$BellRingDelay}==1))}
+{
+\0\s[2]{$BellHour}點{$BellMinute}分到了，\w9{$username}。\n\n
+\![*]\q[知道了,BellCancel]\n
+\e
+}
+
+//----闹钟打开模式，每天提醒哦，隔几分钟提醒。
+$OnMinuteChange,{$if (({$BellMode}==1) && ({$hour}=={$BellHour}) && ({$minute}=={$BellMinute}) && ({$BellRingMode}==1) && ({$BellRingDelay}==1))}
+{
+\0\s[28]\_v[09.mp3]鐺鐺～☆\n{$BellHour}點{$BellMinute}分到了，\w9{$username}。\n\n[half]
+\![*]\q[知道了,BellCancel]\n
+\e
+}
+
+//
+$OnChoiceTimeout,{$if (({$BellMode}==1) && ({$BellRingDelay}==1))}
+{
+{$BellMinute+={$BellDelayTime}}
+{$if ({$BellMinute}>60) { {$BellHour++}{$BellMinute-=60} } else {}}
+}
+
+
+
+$OnMinuteChange; {$if ({$lasthour}!={$hour})}
+{$_OnHourChange}{$lasthour={$hour}}
+
+$_OnHourChange
+{$TalkTime{$hour}}
+
+//**** 経过时间 *******************************************************************************************************
+
+//---- OS -------------------------------------------------------------------------------------------------------------
+
+//$OnMinuteChange; {$if (({$lastelapsedhour}!={$elapsedhouros}) && ({$parawork}==0))}
+//
+//{$temp={$elapsedhouros}}
+//{$if ({$TimeWork}!={$temp}) { {$TimeWork={$temp}}{$CallWorktime} }}
+//{$lastelapsedhour={$elapsedhouros}}
+//
+
+//---- ゴースト -------------------------------------------------------------------------------------------------------
+
+$OnMinuteChange; {$if (({$lastelapsedhour}!={$elapsedhour}) && ({$parawork}!=0))}
+{
+{$temp={$elapsedhour}}
+{$if ({$TimeWork}!={$temp}) { {$TimeWork={$temp}}{$CallWorktime} }}
+{$lastelapsedhour={$elapsedhour}}
+}
+
+$CallWorktime
+{
+{$if ((0<{$TimeWork}) && ({$TimeWork}<2)) { {$TalkWorktimeVeryshort} }}
+{$if ((2<={$TimeWork}) && ({$TimeWork}<5)) { {$TalkWorktimeShort} }}
+{$if ((5<={$TimeWork}) && ({$TimeWork}<8)) { {$TalkWorktimeMiddle} }}
+{$if ((8<={$TimeWork}) && ({$TimeWork}<11)) { {$TalkWorktimeLong} }}
+{$if ((11<={$TimeWork})) { {$TalkWorktimeVerylong} }}
+}
+
+//---- 最小化 ---------------------------------------------------------------------------------------------------------
+
+$OnMinuteChange;{$if ({$minimize}==1)}
+{$minimizetime++}
+
+//---- 抚で -----------------------------------------------------------------------------------------------------------
+
+$OnSecondChange;{$if ({$headpatflag}==1)}
+{$if ({$_headpatcount}>=30) { {$headpatflag=0}{$_headpatcount=0}{$headpatcount=0} } else { {$_headpatcount++} }}
+
+//**** 秒処理（见切れ?重なり） ***************************************************************************************
+
+$OnSecondChange;{$if (({$mikireflag}) && ({$reference(1)}==0) && ({$mikireswitch}==1))}
+{$mikirecount=0}{$mikireflag=false}{$mikiretalkedflag=false}{$Mikirez}
+
+$OnSecondChange;{$if (({$kasanariflag}) && ({$reference(2)}==0) && ({$kasanariswitch}==1))}
+{$kasanaricount=0}{$kasanariflag=false}{$kasanaritalkedflag=false}
+
+$OnSecondChange;{$if (({$mikireflag}) && ({$mikiretalkedflag}==false) && ({$mikireswitch}==1))}
+{$mikiretalkedflag=true}{$Mikire}
+
+$OnSecondChange;{$if (({$kasanariflag}) && ({$kasanaritalkedflag}==false) && ({$kasanariswitch}==1))}
+{$kasanaritalkedflag=true}{$Kasanari}
+
+
+//---- ランダムトーク発行 ---------------------------------------------------------------------------------------------
+
+$OnSecondChange; {$if ({$talkcount}>{$talkinterval})}
+{$talkcount=0}{$if (({$talkinterval}>0) && ({$reference(3)}!=0)) { {$Talk} }}
+
+$OnSecondChange
+{
+{$mikirecount+={$reference(1)}}
+{$kasanaricount+={$reference(2)}}
+{$mikireflag={$if ({$mikirecountmax}<={$mikirecount})}}
+{$kasanariflag={$if ({$kasanaricountmax}<={$kasanaricount})}}
+{$talkcount++}
+}
+
+//**** サーフィス情报取得 *********************************************************************************************
+
+$OnSurfaceChange
+{
+{$SakuraFace={$reference(0)}}{$KeroFace={$reference(1)}}
+}
+//**** サーフィス复帰 *************************************************************************************************
+
+$OnSurfaceRestore
+{
+{$_talk={$TalkReturn}}
+{$temp={$TalkReturn{$reference(0)}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$temp={$TalkReturn{$reference(1)}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$_talk}\e
+}
+
+//**** マウスイベント *************************************************************************************************
+
+//---- 双击 -----------------------------------------------------------------------------------------------------------
+
+$OnMouseDoubleClick
+{
+{$if ({$reference(3)}==0) { {$_talk={$TalkSakura{$reference(4)}Click}}{$_talk}{$TalkSakuraClick} } else { {$_talk={$TalkKero{$reference(4)}Click}}{$_talk}{$TalkKeroClick} }}
+}
+
+//---- 抚摸 -----------------------------------------------------------------------------------------------------------
+
+$OnMouseMove,{$if ({$headmousemovecount}<={$getmousemovecount(0,"Head")})}
+{
+{$resetmousemovecount(0,"Head")}{$TalkSakuraHead}
+}
+
+$OnMouseMove,{$if ({$facemousemovecount}<={$getmousemovecount(0,"Face")})}
+{
+{$resetmousemovecount(0,"Face")}{$TalkSakuraFace}
+}
+
+$OnMouseMove,{$if ({$bustmousemovecount}<={$getmousemovecount(0,"Bust")})}
+{
+{$resetmousemovecount(0,"Bust")}{$TalkSakuraBust}
+}
+
+$OnMouseMove,{$if ({$handmousemovecount}<={$getmousemovecount(0,"Hand")})}
+{
+{$resetmousemovecount(0,"Hand")}{$TalkSakuraHand}
+}
+//---- シングルクリック -----------------------------------------------------------------------------------------------
+
+//$OnMouseClick
+
+//---- ホイール -------------------------------------------------------------------------------------------------------
+
+//$OnMouseWheel
+
+//---- キーボード -----------------------------------------------------------------------------------------------------
+
+//$OnKeyPress
+
+//**** フェーズ *******************************************************************************************************
+
+$Phase
+{
+{$_phase="1"}
+{$if ({$intimacy}<=-10) { {$_phase="0"} }}
+{$if (({$elapsedhourtotal}>=24) && ({$intimacy}>50)) { {$_phase="2"} }}
+{$if ({$partingflag}=="1") { {$_phase="3"} }}
+{$_phase}
+}
+
+//**** インストール ***************************************************************************************************
+
+$OnInstallBegin
+{$TalkInstallbegin}
+
+$OnInstallComplete
+{
+{$temp1={$reference(0)}}{$InstallName={$reference(1)}}
+{$_talk={$TalkInstall}}
+{$temp={$TalkInstall{$temp1}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$_talk}\e
+}
+
+$OnInstallFailure
+{
+{$temp1={$reference(0)}}
+{$_talk={$TalkInstallfail}}
+{$temp={$TalkInstallfail{$temp1}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$_talk}\e
+}
+
+$OnInstallRefuse
+{$TalkInstallrefuse}
+
+//**** ファイルドロップ ***********************************************************************************************
+
+$OnFileDropping
+{$FileDropping}\e
+
+$OnFileDrop2
+{
+{$filename="{$reference(0)}"}
+{$CheckExt}
+{$if (({$ext}==".png") || ({$ext}==".PNG") || ({$ext}==".jpeg") || ({$ext}==".JPEG") || ({$ext}==".jpg") || ({$ext}==".JPG") || ({$ext}==".bmp") || ({$ext}==".BMP")) { {$_PictureFileDrop} }}
+{$if (({$ext}==".mid") || ({$ext}==".MID") || ({$ext}==".wav") || ({$ext}==".WAV") || ({$ext}==".mp3") || ({$ext}==".MP3") || ({$ext}==".wma") || ({$ext}==".WMA") || ({$ext}==".au") || ({$ext}==".AU")) { {$_MusicFileDrop} }}
+//\0\s[0]{$filename}\n{$ext}\e
+}
+
+$CheckExt
+{$idx=0}{$SearchExt}
+
+$SearchExt
+{
+{$idx++}
+{$ext={$substringr({$filename},{$idx})}}
+{$if ({$substringfirst({$ext})}!=".") { {$SearchExt} }}
+}
+
+//**** ディレクトリドロップ *******************************************************************************************
+
+//$OnDirectoryDrop
+
+//**** URLドロップ ****************************************************************************************************
+
+$OnURLDropping
+{$TalkDownload}\e
+
+//$OnURLDropped 
+
+$OnURLDropFailure
+{$TalkDownloadFail}\e
+
+//**** メールチェック *************************************************************************************************
+
+$OnBIFFBegin
+{$TalkMailstart}
+
+$OnBIFFComplete
+{$if ({$reference(0)}>0) { {$TalkGottaMail} } else { {$TalkNoMail} }}
+
+$OnBIFF2Complete
+{$if (({$reference(0)}>0) && ({$reference(3)}>0)) { {$if ({$reference(3)}>0) { {$NewMail={$reference(0)}} } else { {$NewMail={$reference(3)}} }}{$TalkGottaMail2} } else { {$TalkNoMail2} }}
+
+$OnBIFFFailure
+{
+{$temp1={$reference(0)}}
+{$_talk={$TalkMailError}}
+{$temp={$TalkMail{$temp1}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$_talk}\e
+}
+
+//**** ネットワーク更新 ***********************************************************************************************
+
+$OnUpdateBegin
+{$TalkUpdatebegin}
+
+$OnUpdateReady
+{$temp={$reference(0)}}{$temp+=1}{$TalkUpdateready}
+
+$OnUpdate.OnDownloadBegin
+{$TalkDownloadbegin}
+
+$OnUpdate.OnMD5CompareBegin
+{$TalkMD5Begin}
+
+$OnUpdate.OnMD5CompareComplete
+{$TalkMD5Complete}
+
+$OnUpdate.OnMD5CompareFailure
+{$TalkMD5Fail}
+
+$OnUpdateComplete; {$if ({$reference(0)}==none)}
+{$TalkUpdatenoupdate}
+
+$OnUpdateComplete
+{$TalkUpdatecomplete}
+
+$OnUpdateFailure
+{
+{$temp1={$reference(0)}}
+{$_talk={$TalkUpdatefailetc}}
+{$temp={$TalkUpdatefail{$temp1}}}
+{$if ({$length({$temp})}>0) { {$_talk={$temp}} }}
+{$_talk}\e
+}
+
+//**** 时计合わせ *****************************************************************************************************
+
+$OnSNTPBegin
+{$TalkSNTPstart}
+
+$OnSNTPCompare; {$if ({$reference(3)}==0)}
+{$TalkSNTPcompareNolag}
+
+$OnSNTPCompare
+{$TalkSNTPcompare}
+
+$OnSNTPFailure
+{$TalkSNTPfailed}
+
+$DispTimeSNTP
+{
+{$getvalue({$reference(1)},0)}/
+{$if ({$getvalue({$reference(1)},1)}<10) { {$choice(" ")} }}{$getvalue({$reference(1)},1)}/
+{$if ({$getvalue({$reference(1)},2)}<10) { {$choice(" ")} }}{$getvalue({$reference(1)},2)} 
+{$if ({$getvalue({$reference(1)},3)}<10) { {$choice("\ ")} }}{$getvalue({$reference(1)},3)}:
+{$if ({$getvalue({$reference(1)},4)}<10) { {$choice("0")} }}{$getvalue({$reference(1)},4)}:
+{$if ({$getvalue({$reference(1)},5)}<10) { {$choice("0")} }}{$getvalue({$reference(1)},5)}
+}
+
+$DispTimeSNTPj
+{
+{$getvalue({$reference(1)},0)}年
+{$getvalue({$reference(1)},1)}月
+{$getvalue({$reference(1)},2)}日
+{$if ({$getvalue({$reference(1)},3)}<10) { {$choice(" ")} }}{$getvalue({$reference(1)},3)}时
+{$getvalue({$reference(1)},4)}分
+{$getvalue({$reference(1)},5)}秒
+}
+
+$DispTimeLOCAL
+{
+{$getvalue({$reference(2)},0)}/
+{$if ({$getvalue({$reference(2)},1)}<10) { {$choice(" ")} }}{$getvalue({$reference(2)},1)}/
+{$if ({$getvalue({$reference(2)},2)}<10) { {$choice(" ")} }}{$getvalue({$reference(2)},2)} 
+{$if ({$getvalue({$reference(2)},3)}<10) { {$choice("\ ")} }}{$getvalue({$reference(2)},3)}:
+{$if ({$getvalue({$reference(2)},4)}<10) { {$choice("0")} }}{$getvalue({$reference(2)},4)}:
+{$if ({$getvalue({$reference(2)},5)}<10) { {$choice("0")} }}{$getvalue({$reference(2)},5)}
+}
+
+$DispTimeLOCALj
+{
+{$getvalue({$reference(2)},0)}年
+{$getvalue({$reference(2)},1)}月
+{$getvalue({$reference(2)},2)}日
+{$if ({$getvalue({$reference(2)},3)}<10) { {$choice(" ")} }}{$getvalue({$reference(2)},3)}时
+{$getvalue({$reference(2)},4)}分
+{$getvalue({$reference(2)},5)}秒
+}
+
+//**** ヘッドラインセンス *********************************************************************************************
+
+$OnHeadlinesenseBegin
+{$TalkHeadlineBegin}
+
+$OnHeadlinesense.OnFind; {$if ({$reference(2)}==First)}
+{$JumpURL={$reference(1)}}{$TalkHeadlineFirst}\n\n{$reference(3)}\n{$TalkHeadlineChoice}
+
+$OnHeadlinesense.OnFind; {$if ({$reference(2)}==Next)}
+{$JumpURL={$reference(1)}}{$TalkHeadlineNext}\n\n{$reference(3)}\n{$TalkHeadlineChoice}
+
+$OnHeadlinesense.OnFind; {$if ({$reference(2)}==First and Last)}
+{$JumpURL={$reference(1)}}{$TalkHeadlineFirst}\n\n{$reference(3)}\n{$TalkHeadlineChoiceEnd}
+
+$OnHeadlinesense.OnFind; {$if ({$reference(2)}==Last)}
+{$JumpURL={$reference(1)}}{$TalkHeadlineNext}\n\n{$reference(3)}\n{$TalkHeadlineChoiceEnd}
+
+$OnHeadlinesenseFailure; {$if ({$reference(0)}=="can't download")}
+{$TalkHeadlineFailed}
+
+$OnHeadlinesenseFailure; {$if ({$reference(0)}=="can't analyze")}
+{$TalkHeadlineMiss}
+
+$OnHeadlinesenseFailure
+{$TalkHeadlineError}
+
+$OnHeadlinesenseComplete; {$if ({$reference(0)}=="no update")}
+{$TalkHeadlineNoupdate}
+
+//**** Winamp *********************************************************************************************************
+
+$OnMusicPlay
+{$TalkWinampplay}
+
+//**** 选択肢 *********************************************************************************************************
+$OnChoiceSelect,{$if (({$MusicSelectOn}==1) && ({$substring({$reference(0)},1,2)}==RE))}
+{
+{$MusicStart}
+}
+
+$OnChoiceSelect
+{
+{$if ({$substring({$reference(0)},0,7)}=="http://") 
+{ \![open,browser,{$reference(0)}]\b[-1]\e } 
+else 
+{ {$say={$Select.{$reference(0)}}}{$say} }}
+}
+//---- 选択肢タイムアウト ---------------------------------------------------------------------------------------------
+
+$OnChoiceTimeout
+{
+{$TalkTimeout}
+}
+//**** SSTPブレイク ***************************************************************************************************
+
+$OnSSTPBreak
+{$TalkSSTPbreak}
+
+//**** updates2.dau 作成 **********************************************************************************************
+
+$OnUpdatedataCreating
+{$TalkUpdateCreating}
+
+$OnUpdatedataCreated
+{$TalkUpdateCreated}
+
+//**** nar作成 ********************************************************************************************************
+
+$OnNarCreating
+{$TalkNarCreating}
+
+$OnNarCreated
+{$TalkNarCreated}
+
+//**** 通信が重い *****************************************************************************************************
+
+$OnNetworkHeavy
+{$TalkNetworkheavy}
+
+//**** デスクトップ解像度変化 *****************************************************************************************
+
+$OnDisplayChange
+{$DisplayBpp={$reference(0)}}{$DisplayWidth={$reference(1)}}{$DisplayHeight={$reference(2)}}{$TalkDisplayChange}
+
+//**** ブラックリスティング *******************************************************************************************
+
+$OnSSTPBlacklisting
+{$TalkBlacklist}
+
+//**** メニューからサイト选択 *****************************************************************************************
+
+$OnRecommendsiteChoice
+{$_talk={$TalkURL.{$reference(0)}}}{$_talk}
+
+//**** 変数初期化 *****************************************************************************************************
+
+$ValClear
+{
+{$temp=""}{$temp1=""}{$temp2=""}{$temp3=""}{$temp4=""}{$temp5=""}
+{$WorkKind=""}{$TimeWork=""}{$timezone=""}
+{$DisplayBpp=""}{$DisplayWidth=""}{$DisplayHeight=""}
+{$talkcount=""}{$_talk=""}{$lastchangedghost=""}
+}

@@ -1,0 +1,15 @@
+[clock]
+background.image,poring_clock.png
+centre.x,39
+centre.y,32
+dot.r,2
+dot.color,0xf9988d
+hour.width,3
+hour.length,15
+hour.color,0xdf7b74
+minute.width,2
+minute.length,25
+minute.color,0xfffaea
+second.width,1
+second.length,30
+second.color,0xe60000

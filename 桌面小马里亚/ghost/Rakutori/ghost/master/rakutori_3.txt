@@ -1,0 +1,27 @@
+#_Common
+{$if ({$mode}==0)}
+
+$homeurl
+http://cat-fish.net/ssp/rakutori/update/
+
+$updatebutton.visible
+1
+
+$readmebuttoncaption
+關於里亚·紫藤月…
+
+$sakura.recommendsites
+{
+伯爵先生帮里亚写了辞书:laughing:
+}
+
+$sakura.portalsites
+{
+伯爵商人
+}
+
+$sakura.recommendbuttoncaption
+製作相關(&R)
+
+$sakura.portalbuttoncaption
+特別感謝(&P)
